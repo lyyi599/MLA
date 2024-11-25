@@ -1,0 +1,68 @@
+** Config **
+MLA_power: 1.0
+adapter: False
+adapter_dim: None
+adaptformer: True
+adaptformer_scale: learnable
+backbone: CLIP-ViT-B/16
+batch_size: 128
+bias: None
+bias_tuning: False
+bn_tuning: False
+classifier: CosineClassifier
+dali_cpu: True
+dataset: iNaturalist2018
+deterministic: True
+expand: 24
+full_tuning: False
+global_adapt: False
+gpu: 0
+imb_factor: None
+init_head: text_feat
+ln_tuning: False
+lora: False
+lora_mlp: False
+loss_type: LA
+lr: 0.01
+mask: False
+mask_ratio: None
+mask_seed: None
+micro_batch_size: 128
+model_dir: None
+momentum: 0.9
+num_epochs: 20
+num_workers: 8
+output_dir: ./output/inat2018_clip_vit_b16_adaptformer_True_loss_type_LA_num_epochs_20_lr_0.01_test_only_True
+partial: None
+prec: amp
+print_freq: 10
+prompt: default
+randaug_times: 1
+resolution: 224
+root: /2T/dataset
+scale: 25
+seed: 0
+ssf_attn: False
+ssf_ln: False
+ssf_mlp: False
+test_only: True
+test_train: False
+tte: False
+tte_mode: fivecrop
+vpt_deep: False
+vpt_len: None
+vpt_shallow: False
+weight_decay: 0.0005
+zero_shot: False
+************
+Setting fixed seed: 0
+mean: [0.48145466, 0.4578275, 0.40821073]
+std: [0.26862954, 0.26130258, 0.27577711]
+Files already downloaded and verified
+Total training points: 437513
+Building model
+Loading CLIP (backbone: CLIP-ViT-B/16)
+Adapter bottle dimension set to 256
+Model directory: ./output/inat2018_clip_vit_b16_adaptformer_True_loss_type_LA_num_epochs_20_lr_0.01
+Loading weights to from ./output/inat2018_clip_vit_b16_adaptformer_True_loss_type_LA_num_epochs_20_lr_0.01/checkpoint.pth.tar
+Evaluate on the test set

@@ -1,0 +1,2 @@
+dataset: "ImageNet_LT"
+root: "/2T/dataset/ImageNet/ILSVRC/Data/CLS-LOC"

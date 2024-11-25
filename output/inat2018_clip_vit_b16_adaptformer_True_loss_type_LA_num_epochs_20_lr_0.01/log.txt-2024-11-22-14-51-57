@@ -1,0 +1,429 @@
+** Config **
+adapter: False
+adapter_dim: None
+adaptformer: True
+adaptformer_scale: learnable
+backbone: CLIP-ViT-B/16
+batch_size: 128
+bias: None
+bias_tuning: False
+bn_tuning: False
+classifier: CosineClassifier
+dali_cpu: True
+dataset: iNaturalist2018
+deterministic: True
+expand: 24
+full_tuning: False
+global_adapt: False
+gpu: None
+imb_factor: None
+init_head: text_feat
+ln_tuning: False
+lora: False
+lora_mlp: False
+loss_type: LA
+lr: 0.01
+mask: False
+mask_ratio: None
+mask_seed: None
+micro_batch_size: 128
+model_dir: None
+momentum: 0.9
+num_epochs: 20
+num_workers: 16
+output_dir: ./output/inat2018_clip_vit_b16_MLA1_adaptformer_True_loss_type_LA_num_epochs_20_lr_0.01
+partial: None
+prec: amp
+print_freq: 10
+prompt: default
+randaug_times: 1
+resolution: 224
+root: /2T/dataset
+scale: 25
+seed: 0
+ssf_attn: False
+ssf_ln: False
+ssf_mlp: False
+test_only: False
+test_train: False
+tte: False
+tte_mode: fivecrop
+vpt_deep: False
+vpt_len: None
+vpt_shallow: False
+weight_decay: 0.0005
+zero_shot: False
+************
+Setting fixed seed: 0
+mean: [0.48145466, 0.4578275, 0.40821073]
+std: [0.26862954, 0.26130258, 0.27577711]
+Files already downloaded and verified
+Total training points: 437513
+Building model
+Loading CLIP (backbone: CLIP-ViT-B/16)
+Adapter bottle dimension set to 256
+Turning off gradients in the model
+Turning on gradients in the tuner
+Turning on gradients in the head
+Total params: 160631258
+Tuned params: 4749324
+Head params: 6261198
+Initialize head with text features
+Initialize tensorboard (log_dir=./output/inat2018_clip_vit_b16_MLA1_adaptformer_True_loss_type_LA_num_epochs_20_lr_0.01/tensorboard)
+epoch [1/20] batch [10/3419] time 0.336 (3.083) data 0.000 (2.654) loss 6.8977 (6.8191) acc 3.1250 (3.2686) (mean 0.3875 many 0.0000 med 0.0000 few 0.6333) lr 1.0000e-02 eta 2 days, 10:33:34
+epoch [1/20] batch [20/3419] time 0.334 (2.544) data 0.000 (2.162) loss 6.6432 (6.6719) acc 3.1250 (4.3171) (mean 0.4780 many 0.0000 med 0.0000 few 1.8619) lr 1.0000e-02 eta 2 days, 0:18:09
+epoch [1/20] batch [30/3419] time 0.332 (1.807) data 0.000 (1.441) loss 6.1221 (6.4060) acc 8.5938 (4.7864) (mean 0.5721 many 0.0000 med 0.0000 few 2.0838) lr 1.0000e-02 eta 1 day, 10:18:06
+epoch [1/20] batch [40/3419] time 0.334 (1.887) data 0.000 (1.529) loss 6.1524 (6.2775) acc 7.0312 (5.6880) (mean 0.6582 many 0.0000 med 0.2857 few 3.0714) lr 1.0000e-02 eta 1 day, 11:49:40
+epoch [1/20] batch [50/3419] time 0.332 (1.931) data 0.000 (1.578) loss 6.0094 (6.1046) acc 12.5000 (7.4653) (mean 0.7877 many 0.0000 med 0.2857 few 3.1782) lr 1.0000e-02 eta 1 day, 12:39:16
+epoch [1/20] batch [60/3419] time 0.332 (1.669) data 0.000 (1.319) loss 6.1894 (6.1202) acc 9.3750 (6.8789) (mean 0.8785 many 0.0000 med 0.2857 few 3.2410) lr 1.0000e-02 eta 1 day, 7:40:45
+epoch [1/20] batch [70/3419] time 1.412 (1.729) data 1.082 (1.381) loss 5.8363 (5.9743) acc 5.4688 (6.3166) (mean 0.9339 many 0.0000 med 0.2857 few 3.3539) lr 1.0000e-02 eta 1 day, 8:48:05
+epoch [1/20] batch [80/3419] time 0.330 (1.554) data 0.000 (1.209) loss 5.7850 (5.8642) acc 8.5938 (6.8244) (mean 0.9976 many 0.0000 med 0.5429 few 3.7956) lr 1.0000e-02 eta 1 day, 5:29:01
+epoch [1/20] batch [90/3419] time 0.330 (1.619) data 0.000 (1.275) loss 6.2433 (5.9009) acc 10.1562 (8.1054) (mean 1.0580 many 0.0000 med 0.5429 few 4.3119) lr 1.0000e-02 eta 1 day, 6:42:28
+epoch [1/20] batch [100/3419] time 0.332 (1.667) data 0.000 (1.324) loss 5.5827 (5.7395) acc 11.7188 (9.3529) (mean 1.1348 many 0.0000 med 0.5429 few 4.7083) lr 1.0000e-02 eta 1 day, 7:36:39
+epoch [1/20] batch [110/3419] time 0.332 (1.545) data 0.000 (1.204) loss 5.5807 (5.6366) acc 9.3750 (10.2236) (mean 1.2115 many 0.0000 med 0.5429 few 4.2301) lr 1.0000e-02 eta 1 day, 5:18:15
+epoch [1/20] batch [120/3419] time 0.333 (1.599) data 0.000 (1.258) loss 5.7750 (5.5205) acc 5.4688 (10.5981) (mean 1.3041 many 0.0000 med 0.8286 few 3.3554) lr 1.0000e-02 eta 1 day, 6:19:27
+epoch [1/20] batch [130/3419] time 3.550 (1.638) data 3.216 (1.298) loss 6.1624 (5.5546) acc 10.1562 (10.7220) (mean 1.3955 many 0.0000 med 0.7743 few 3.0169) lr 1.0000e-02 eta 1 day, 7:03:26
+epoch [1/20] batch [140/3419] time 0.331 (1.545) data 0.000 (1.205) loss 5.1919 (5.5661) acc 15.6250 (10.6809) (mean 1.4550 many 0.0000 med 0.7743 few 3.2184) lr 1.0000e-02 eta 1 day, 5:16:59
+epoch [1/20] batch [150/3419] time 0.330 (1.589) data 0.000 (1.250) loss 5.2295 (5.3791) acc 9.3750 (11.4905) (mean 1.5228 many 0.0000 med 1.0600 few 3.5373) lr 1.0000e-02 eta 1 day, 6:06:50
+epoch [1/20] batch [160/3419] time 0.330 (1.510) data 0.000 (1.172) loss 4.8073 (5.2872) acc 13.2812 (11.9957) (mean 1.5856 many 0.0000 med 1.0600 few 4.7463) lr 1.0000e-02 eta 1 day, 4:37:11
+epoch [1/20] batch [170/3419] time 0.331 (1.546) data 0.000 (1.207) loss 5.4954 (5.4078) acc 8.5938 (11.9823) (mean 1.6629 many 0.0000 med 1.0600 few 4.2077) lr 1.0000e-02 eta 1 day, 5:17:01
+epoch [1/20] batch [180/3419] time 0.329 (1.577) data 0.000 (1.239) loss 5.5271 (5.3375) acc 8.5938 (12.6053) (mean 1.7364 many 0.0000 med 1.0600 few 3.3901) lr 1.0000e-02 eta 1 day, 5:52:30
+epoch [1/20] batch [190/3419] time 0.332 (1.511) data 0.000 (1.174) loss 5.3493 (5.3268) acc 11.7188 (12.5336) (mean 1.7869 many 0.0000 med 1.2683 few 3.6460) lr 1.0000e-02 eta 1 day, 4:37:44
+epoch [1/20] batch [200/3419] time 0.334 (1.542) data 0.000 (1.205) loss 5.1272 (5.3363) acc 14.8438 (12.0858) (mean 1.8344 many 0.0000 med 1.2243 few 3.9618) lr 1.0000e-02 eta 1 day, 5:12:47
+epoch [1/20] batch [210/3419] time 5.634 (1.569) data 5.300 (1.232) loss 5.1715 (5.2450) acc 14.8438 (14.0336) (mean 1.9239 many 0.0000 med 1.2243 few 3.7033) lr 1.0000e-02 eta 1 day, 5:42:36
+epoch [1/20] batch [220/3419] time 0.331 (1.513) data 0.000 (1.176) loss 5.0989 (5.2019) acc 14.8438 (13.1286) (mean 1.9563 many 0.0000 med 1.2243 few 3.6861) lr 1.0000e-02 eta 1 day, 4:38:25
+epoch [1/20] batch [230/3419] time 0.331 (1.539) data 0.000 (1.203) loss 4.9642 (5.1347) acc 16.4062 (14.2725) (mean 2.0141 many 0.0000 med 1.2243 few 4.6010) lr 1.0000e-02 eta 1 day, 5:08:17
+epoch [1/20] batch [240/3419] time 0.332 (1.489) data 0.000 (1.153) loss 4.9316 (5.0764) acc 17.9688 (14.9057) (mean 2.0735 many 0.0000 med 1.4705 few 5.3809) lr 1.0000e-02 eta 1 day, 4:10:53
+epoch [1/20] batch [250/3419] time 0.330 (1.509) data 0.000 (1.173) loss 5.3518 (5.0280) acc 15.6250 (16.4773) (mean 2.1532 many 0.0000 med 1.4419 few 5.7742) lr 1.0000e-02 eta 1 day, 4:33:19
+epoch [1/20] batch [260/3419] time 0.331 (1.529) data 0.000 (1.193) loss 5.3794 (5.1257) acc 11.7188 (16.3205) (mean 2.2342 many 0.0000 med 1.4419 few 4.8341) lr 1.0000e-02 eta 1 day, 4:55:57
+epoch [1/20] batch [270/3419] time 0.333 (1.485) data 0.000 (1.149) loss 4.8903 (4.9850) acc 21.8750 (17.1622) (mean 2.2885 many 0.0000 med 1.4419 few 4.1812) lr 1.0000e-02 eta 1 day, 4:05:21
+epoch [1/20] batch [280/3419] time 0.332 (1.504) data 0.000 (1.168) loss 5.2078 (4.9987) acc 14.8438 (17.4955) (mean 2.3519 many 0.0000 med 1.4419 few 3.9475) lr 1.0000e-02 eta 1 day, 4:26:29
+epoch [1/20] batch [290/3419] time 4.854 (1.523) data 4.520 (1.188) loss 4.6479 (4.9386) acc 17.9688 (17.5097) (mean 2.4126 many 0.0000 med 1.4419 few 3.9679) lr 1.0000e-02 eta 1 day, 4:48:25
+epoch [1/20] batch [300/3419] time 0.330 (1.483) data 0.000 (1.148) loss 4.6809 (4.9032) acc 18.7500 (17.8584) (mean 2.4747 many 0.0000 med 1.4419 few 4.3513) lr 1.0000e-02 eta 1 day, 4:03:05
+epoch [1/20] batch [310/3419] time 0.330 (1.502) data 0.001 (1.167) loss 4.8840 (4.8903) acc 20.3125 (18.2164) (mean 2.5423 many 0.0000 med 1.4419 few 5.0899) lr 1.0000e-02 eta 1 day, 4:24:03
+epoch [1/20] batch [320/3419] time 0.331 (1.465) data 0.000 (1.130) loss 4.4784 (4.8070) acc 19.5312 (18.7921) (mean 2.6169 many 0.0000 med 1.4419 few 4.8387) lr 1.0000e-02 eta 1 day, 3:42:19
+epoch [1/20] batch [330/3419] time 0.332 (1.483) data 0.000 (1.148) loss 4.9694 (4.8353) acc 16.4062 (18.5462) (mean 2.6652 many 0.0000 med 1.4419 few 5.1777) lr 1.0000e-02 eta 1 day, 4:02:07
+epoch [1/20] batch [340/3419] time 0.332 (1.499) data 0.000 (1.164) loss 4.7500 (4.8291) acc 16.4062 (17.7022) (mean 2.7198 many 0.5429 med 1.4419 few 4.6770) lr 1.0000e-02 eta 1 day, 4:20:06
+epoch [1/20] batch [350/3419] time 0.330 (1.469) data 0.000 (1.135) loss 5.0802 (4.8518) acc 19.5312 (18.7126) (mean 2.7788 many 0.4886 med 1.4419 few 4.1592) lr 1.0000e-02 eta 1 day, 3:45:59
+epoch [1/20] batch [360/3419] time 0.333 (1.483) data 0.000 (1.149) loss 5.0283 (4.8057) acc 15.6250 (18.8685) (mean 2.8444 many 0.4886 med 1.4419 few 4.9160) lr 1.0000e-02 eta 1 day, 4:01:26
+epoch [1/20] batch [370/3419] time 6.387 (1.502) data 6.052 (1.167) loss 4.7607 (4.7935) acc 20.3125 (19.1880) (mean 2.9013 many 0.3957 med 1.4419 few 4.4227) lr 1.0000e-02 eta 1 day, 4:22:03
+epoch [1/20] batch [380/3419] time 0.330 (1.471) data 0.000 (1.136) loss 4.5920 (4.7013) acc 17.1875 (19.5273) (mean 2.9650 many 0.3957 med 1.4419 few 4.4957) lr 1.0000e-02 eta 1 day, 3:46:54
+epoch [1/20] batch [390/3419] time 0.330 (1.488) data 0.000 (1.154) loss 4.9878 (4.7825) acc 17.9688 (19.5400) (mean 3.0193 many 0.3957 med 1.4419 few 4.5570) lr 1.0000e-02 eta 1 day, 4:06:01
+epoch [1/20] batch [400/3419] time 0.332 (1.460) data 0.000 (1.125) loss 4.5957 (4.7984) acc 22.6562 (19.9395) (mean 3.0823 many 0.3957 med 1.4419 few 5.0607) lr 1.0000e-02 eta 1 day, 3:33:45
+epoch [1/20] batch [410/3419] time 0.331 (1.474) data 0.000 (1.140) loss 4.8275 (4.7764) acc 22.6562 (20.3828) (mean 3.1368 many 0.3957 med 1.4419 few 4.5413) lr 1.0000e-02 eta 1 day, 3:49:36
+epoch [1/20] batch [420/3419] time 0.330 (1.490) data 0.000 (1.155) loss 4.5630 (4.5819) acc 20.3125 (21.7400) (mean 3.2106 many 0.3206 med 1.3777 few 4.1165) lr 1.0000e-02 eta 1 day, 4:07:13
+epoch [1/20] batch [430/3419] time 0.333 (1.463) data 0.000 (1.129) loss 5.2326 (4.6496) acc 17.1875 (20.9854) (mean 3.2655 many 0.3206 med 1.3777 few 4.5907) lr 1.0000e-02 eta 1 day, 3:36:33
+epoch [1/20] batch [440/3419] time 0.333 (1.477) data 0.000 (1.143) loss 4.3657 (4.7030) acc 21.8750 (19.6159) (mean 3.2883 many 0.2885 med 1.3199 few 4.0279) lr 1.0000e-02 eta 1 day, 3:52:11
+epoch [1/20] batch [450/3419] time 7.812 (1.490) data 7.477 (1.156) loss 4.9739 (4.6850) acc 22.6562 (21.2343) (mean 3.3638 many 0.2885 med 1.3199 few 5.0996) lr 1.0000e-02 eta 1 day, 4:07:04
+epoch [1/20] batch [460/3419] time 0.331 (1.465) data 0.000 (1.131) loss 4.3408 (4.5744) acc 21.8750 (19.9315) (mean 3.3938 many 0.2596 med 1.5799 few 4.9675) lr 1.0000e-02 eta 1 day, 3:38:18
+epoch [1/20] batch [470/3419] time 0.330 (1.478) data 0.000 (1.144) loss 4.4607 (4.5859) acc 17.9688 (20.1504) (mean 3.4369 many 0.2337 med 1.5256 few 5.5401) lr 1.0000e-02 eta 1 day, 3:52:45
+epoch [1/20] batch [480/3419] time 0.330 (1.454) data 0.000 (1.120) loss 4.6551 (4.6409) acc 21.8750 (20.7237) (mean 3.4992 many 0.2337 med 1.5256 few 4.9746) lr 1.0000e-02 eta 1 day, 3:25:28
+epoch [1/20] batch [490/3419] time 0.330 (1.465) data 0.000 (1.131) loss 4.3612 (4.6514) acc 32.0312 (22.5739) (mean 3.5810 many 0.2337 med 1.5256 few 5.0209) lr 1.0000e-02 eta 1 day, 3:37:11
+epoch [1/20] batch [500/3419] time 0.331 (1.476) data 0.000 (1.142) loss 4.3027 (4.5188) acc 17.9688 (22.6396) (mean 3.6539 many 0.2103 med 1.5256 few 4.8235) lr 1.0000e-02 eta 1 day, 3:49:28
+epoch [1/20] batch [510/3419] time 0.329 (1.457) data 0.000 (1.123) loss 4.4802 (4.5357) acc 21.0938 (22.3555) (mean 3.7144 many 0.1704 med 1.5256 few 5.0724) lr 1.0000e-02 eta 1 day, 3:28:03
+epoch [1/20] batch [520/3419] time 0.332 (1.466) data 0.000 (1.132) loss 4.7223 (4.5677) acc 24.2188 (22.7305) (mean 3.7784 many 0.6670 med 1.4736 few 6.0644) lr 1.0000e-02 eta 1 day, 3:38:06
+epoch [1/20] batch [530/3419] time 7.303 (1.476) data 6.968 (1.142) loss 4.4384 (4.5079) acc 21.0938 (21.8978) (mean 3.8157 many 0.9548 med 1.4736 few 6.5468) lr 1.0000e-02 eta 1 day, 3:48:49
+epoch [1/20] batch [540/3419] time 0.332 (1.456) data 0.000 (1.123) loss 4.3160 (4.5550) acc 17.9688 (21.7347) (mean 3.8545 many 0.9548 med 1.4736 few 6.5903) lr 1.0000e-02 eta 1 day, 3:26:38
+epoch [1/20] batch [550/3419] time 1.941 (1.469) data 1.614 (1.135) loss 4.3390 (4.4735) acc 22.6562 (22.3814) (mean 3.8922 many 0.9548 med 1.4736 few 5.7441) lr 1.0000e-02 eta 1 day, 3:40:35
+epoch [1/20] batch [560/3419] time 0.331 (1.449) data 0.000 (1.115) loss 4.8383 (4.5641) acc 20.3125 (22.1604) (mean 3.9465 many 0.8593 med 1.4248 few 5.5794) lr 1.0000e-02 eta 1 day, 3:17:26
+epoch [1/20] batch [570/3419] time 0.330 (1.458) data 0.000 (1.124) loss 4.2599 (4.5619) acc 22.6562 (22.1457) (mean 4.0036 many 1.1450 med 1.4248 few 4.9802) lr 1.0000e-02 eta 1 day, 3:27:19
+epoch [1/20] batch [580/3419] time 0.331 (1.467) data 0.000 (1.134) loss 4.6481 (4.5080) acc 27.3438 (23.0471) (mean 4.0645 many 1.1450 med 1.3780 few 5.2701) lr 1.0000e-02 eta 1 day, 3:37:50
+epoch [1/20] batch [590/3419] time 0.332 (1.450) data 0.000 (1.117) loss 4.2901 (4.4232) acc 26.5625 (23.5930) (mean 4.1209 many 1.1450 med 1.3780 few 7.0614) lr 1.0000e-02 eta 1 day, 3:18:28
+epoch [1/20] batch [600/3419] time 0.333 (1.462) data 0.000 (1.129) loss 4.4097 (4.4249) acc 25.0000 (24.3565) (mean 4.1801 many 1.0591 med 1.3780 few 7.6262) lr 1.0000e-02 eta 1 day, 3:31:23
+epoch [1/20] batch [610/3419] time 8.111 (1.468) data 7.777 (1.135) loss 4.5968 (4.4661) acc 21.0938 (23.9729) (mean 4.2265 many 1.0305 med 1.3780 few 7.7986) lr 1.0000e-02 eta 1 day, 3:38:28
+epoch [1/20] batch [620/3419] time 0.333 (1.452) data 0.000 (1.119) loss 4.3449 (4.4733) acc 28.9062 (23.9998) (mean 4.2809 many 0.9532 med 1.3780 few 7.4327) lr 1.0000e-02 eta 1 day, 3:20:12
+epoch [1/20] batch [630/3419] time 2.921 (1.463) data 2.588 (1.129) loss 4.0124 (4.3555) acc 21.8750 (24.3725) (mean 4.3497 many 0.9532 med 1.3780 few 6.9297) lr 1.0000e-02 eta 1 day, 3:31:36
+epoch [1/20] batch [640/3419] time 0.330 (1.445) data 0.000 (1.112) loss 4.4405 (4.3903) acc 23.4375 (22.8163) (mean 4.3616 many 0.8209 med 1.6637 few 6.7319) lr 1.0000e-02 eta 1 day, 3:11:24
+epoch [1/20] batch [650/3419] time 0.332 (1.455) data 0.000 (1.121) loss 4.4386 (4.3475) acc 29.6875 (24.7703) (mean 4.4003 many 0.8209 med 1.6197 few 6.9891) lr 1.0000e-02 eta 1 day, 3:22:00
+epoch [1/20] batch [660/3419] time 0.330 (1.460) data 0.000 (1.127) loss 4.2367 (4.3367) acc 24.2188 (26.4651) (mean 4.4746 many 0.7388 med 1.6197 few 7.8439) lr 1.0000e-02 eta 1 day, 3:27:57
+epoch [1/20] batch [670/3419] time 0.331 (1.449) data 0.000 (1.116) loss 4.4489 (4.3523) acc 24.2188 (25.7032) (mean 4.5175 many 0.7388 med 1.8769 few 7.7252) lr 1.0000e-02 eta 1 day, 3:14:57
+epoch [1/20] batch [680/3419] time 0.331 (1.456) data 0.000 (1.123) loss 4.5774 (4.4084) acc 23.4375 (25.2112) (mean 4.5643 many 0.7388 med 1.8537 few 7.3262) lr 1.0000e-02 eta 1 day, 3:23:14
+epoch [1/20] batch [690/3419] time 10.455 (1.463) data 10.119 (1.130) loss 3.7781 (4.3660) acc 30.4688 (24.8968) (mean 4.6185 many 0.7388 med 1.8537 few 7.0640) lr 1.0000e-02 eta 1 day, 3:30:52
+epoch [1/20] batch [700/3419] time 0.330 (1.450) data 0.000 (1.117) loss 4.4619 (4.2922) acc 23.4375 (25.4468) (mean 4.6583 many 0.7388 med 1.8537 few 7.0889) lr 1.0000e-02 eta 1 day, 3:16:04
+epoch [1/20] batch [710/3419] time 0.359 (1.456) data 0.031 (1.123) loss 3.9884 (4.2489) acc 31.2500 (25.7709) (mean 4.7010 many 0.6881 med 1.8329 few 6.3304) lr 1.0000e-02 eta 1 day, 3:22:11
+epoch [1/20] batch [720/3419] time 0.331 (1.445) data 0.000 (1.112) loss 4.4629 (4.2334) acc 24.2188 (27.4089) (mean 4.7986 many 0.9738 med 1.8329 few 5.9702) lr 1.0000e-02 eta 1 day, 3:08:56
+epoch [1/20] batch [730/3419] time 0.330 (1.451) data 0.000 (1.118) loss 4.5316 (4.2679) acc 25.0000 (26.4290) (mean 4.8590 many 0.9738 med 1.8329 few 6.5255) lr 1.0000e-02 eta 1 day, 3:15:39
+epoch [1/20] batch [740/3419] time 0.330 (1.459) data 0.000 (1.126) loss 4.2157 (4.2592) acc 25.0000 (26.5471) (mean 4.9324 many 0.9738 med 1.8329 few 6.9131) lr 1.0000e-02 eta 1 day, 3:24:20
+epoch [1/20] batch [750/3419] time 0.330 (1.447) data 0.000 (1.114) loss 3.7846 (4.2310) acc 26.5625 (25.9613) (mean 4.9691 many 0.8996 med 1.8329 few 6.7573) lr 1.0000e-02 eta 1 day, 3:11:15
+epoch [1/20] batch [760/3419] time 0.332 (1.452) data 0.000 (1.119) loss 3.9630 (4.1985) acc 24.2188 (26.8506) (mean 5.0333 many 0.8507 med 1.7933 few 6.9327) lr 1.0000e-02 eta 1 day, 3:16:38
+epoch [1/20] batch [770/3419] time 10.574 (1.459) data 10.240 (1.126) loss 4.4250 (4.1795) acc 25.7812 (27.4102) (mean 5.1047 many 1.0583 med 1.7933 few 7.4112) lr 1.0000e-02 eta 1 day, 3:23:37
+epoch [1/20] batch [780/3419] time 0.329 (1.449) data 0.000 (1.116) loss 4.1226 (4.2501) acc 29.6875 (25.5469) (mean 5.1011 many 1.2712 med 1.7933 few 7.1655) lr 1.0000e-02 eta 1 day, 3:12:23
+epoch [1/20] batch [790/3419] time 1.972 (1.453) data 1.644 (1.120) loss 4.4453 (4.1857) acc 23.4375 (27.1689) (mean 5.1734 many 1.2426 med 1.7933 few 7.0523) lr 1.0000e-02 eta 1 day, 3:16:55
+epoch [1/20] batch [800/3419] time 0.332 (1.441) data 0.001 (1.108) loss 4.3862 (4.2190) acc 25.0000 (26.7268) (mean 5.2273 many 1.1869 med 2.0791 few 7.3581) lr 1.0000e-02 eta 1 day, 3:03:21
+epoch [1/20] batch [810/3419] time 0.330 (1.446) data 0.000 (1.114) loss 4.2987 (4.2337) acc 31.2500 (27.2906) (mean 5.2924 many 1.3863 med 2.0505 few 7.9116) lr 1.0000e-02 eta 1 day, 3:08:52
+epoch [1/20] batch [820/3419] time 0.331 (1.450) data 0.000 (1.117) loss 4.0074 (4.1952) acc 25.0000 (27.0606) (mean 5.3254 many 1.3632 med 2.0505 few 7.4231) lr 1.0000e-02 eta 1 day, 3:13:01
+epoch [1/20] batch [830/3419] time 0.334 (1.443) data 0.000 (1.111) loss 4.4927 (4.2304) acc 21.8750 (26.2168) (mean 5.3504 many 1.3632 med 2.0505 few 8.4793) lr 1.0000e-02 eta 1 day, 3:05:00
+epoch [1/20] batch [840/3419] time 0.332 (1.446) data 0.000 (1.113) loss 3.9773 (4.2635) acc 32.0312 (26.3119) (mean 5.3871 many 1.2978 med 2.0505 few 8.1351) lr 1.0000e-02 eta 1 day, 3:07:50
+epoch [1/20] batch [850/3419] time 6.674 (1.451) data 6.341 (1.118) loss 4.3490 (4.1197) acc 22.6562 (27.3672) (mean 5.4375 many 1.1877 med 2.0505 few 7.7870) lr 1.0000e-02 eta 1 day, 3:12:54
+epoch [1/20] batch [860/3419] time 0.330 (1.447) data 0.000 (1.114) loss 3.7358 (4.1089) acc 30.4688 (27.0091) (mean 5.4814 many 1.3986 med 2.0505 few 8.3321) lr 1.0000e-02 eta 1 day, 3:07:51
+epoch [1/20] batch [870/3419] time 2.477 (1.448) data 2.142 (1.115) loss 4.2190 (4.0900) acc 23.4375 (28.3299) (mean 5.5428 many 1.3790 med 2.0248 few 8.5803) lr 1.0000e-02 eta 1 day, 3:08:56
+epoch [1/20] batch [880/3419] time 0.331 (1.440) data 0.001 (1.108) loss 4.1199 (4.1028) acc 24.2188 (26.7314) (mean 5.5804 many 1.3613 med 2.0248 few 7.8831) lr 1.0000e-02 eta 1 day, 3:00:30
+epoch [1/20] batch [890/3419] time 0.330 (1.443) data 0.000 (1.110) loss 4.0703 (4.0683) acc 27.3438 (26.5674) (mean 5.6093 many 1.5882 med 2.0060 few 8.3654) lr 1.0000e-02 eta 1 day, 3:02:37
+epoch [1/20] batch [900/3419] time 0.332 (1.446) data 0.000 (1.114) loss 4.3158 (4.0939) acc 21.8750 (28.7223) (mean 5.6758 many 1.4502 med 1.9829 few 9.4038) lr 1.0000e-02 eta 1 day, 3:06:46
+epoch [1/20] batch [910/3419] time 0.334 (1.443) data 0.000 (1.111) loss 3.7751 (4.1226) acc 28.9062 (27.3012) (mean 5.7098 many 1.6413 med 2.2290 few 8.6518) lr 1.0000e-02 eta 1 day, 3:03:12
+epoch [1/20] batch [920/3419] time 0.330 (1.444) data 0.000 (1.111) loss 3.4925 (4.0497) acc 37.5000 (29.6568) (mean 5.7836 many 1.7961 med 2.2290 few 8.9879) lr 1.0000e-02 eta 1 day, 3:03:10
+epoch [1/20] batch [930/3419] time 6.899 (1.446) data 6.565 (1.113) loss 4.3632 (4.1440) acc 24.2188 (28.8021) (mean 5.8427 many 1.7275 med 2.1836 few 8.2658) lr 1.0000e-02 eta 1 day, 3:05:24
+epoch [1/20] batch [940/3419] time 0.329 (1.444) data 0.000 (1.112) loss 3.8013 (4.0672) acc 36.7188 (29.6642) (mean 5.8881 many 1.6581 med 2.1836 few 8.0365) lr 1.0000e-02 eta 1 day, 3:03:33
+epoch [1/20] batch [950/3419] time 3.899 (1.444) data 3.566 (1.112) loss 3.7436 (4.0076) acc 32.8125 (29.0829) (mean 5.9274 many 1.8197 med 2.1836 few 7.7909) lr 1.0000e-02 eta 1 day, 3:03:05
+epoch [1/20] batch [960/3419] time 0.332 (1.440) data 0.000 (1.107) loss 4.2245 (3.9529) acc 25.0000 (30.7983) (mean 5.9994 many 1.7141 med 2.1427 few 7.4384) lr 1.0000e-02 eta 1 day, 2:58:08
+epoch [1/20] batch [970/3419] time 0.331 (1.439) data 0.000 (1.106) loss 3.9320 (4.0672) acc 28.1250 (28.5443) (mean 6.0262 many 1.7141 med 2.1427 few 8.0194) lr 1.0000e-02 eta 1 day, 2:56:33
+epoch [1/20] batch [980/3419] time 0.331 (1.441) data 0.000 (1.109) loss 3.7318 (3.8794) acc 35.1562 (30.1804) (mean 6.0723 many 1.6379 med 2.1427 few 8.0542) lr 1.0000e-02 eta 1 day, 2:58:57
+epoch [1/20] batch [990/3419] time 0.335 (1.443) data 0.000 (1.111) loss 4.0245 (3.9564) acc 28.9062 (30.1007) (mean 6.1332 many 1.9236 med 2.3916 few 8.0436) lr 1.0000e-02 eta 1 day, 3:00:59
+epoch [1/20] batch [1000/3419] time 0.330 (1.442) data 0.000 (1.109) loss 4.0708 (3.9663) acc 29.6875 (30.4049) (mean 6.1924 many 1.8549 med 2.3916 few 7.0513) lr 1.0000e-02 eta 1 day, 2:58:50
+epoch [1/20] batch [1010/3419] time 4.869 (1.442) data 4.533 (1.110) loss 4.3434 (4.1370) acc 21.0938 (28.0635) (mean 6.2027 many 1.8549 med 2.3916 few 7.5770) lr 1.0000e-02 eta 1 day, 2:59:22
+epoch [1/20] batch [1020/3419] time 0.329 (1.443) data 0.000 (1.110) loss 3.8760 (4.0664) acc 26.5625 (28.2113) (mean 6.2311 many 2.0581 med 2.3299 few 7.1328) lr 1.0000e-02 eta 1 day, 2:59:48
+epoch [1/20] batch [1030/3419] time 5.607 (1.443) data 5.273 (1.111) loss 3.9091 (3.9878) acc 34.3750 (29.1800) (mean 6.2752 many 2.0025 med 2.3299 few 7.6718) lr 1.0000e-02 eta 1 day, 3:00:01
+epoch [1/20] batch [1040/3419] time 0.331 (1.438) data 0.000 (1.106) loss 3.7078 (3.8895) acc 30.4688 (29.8337) (mean 6.3237 many 2.0025 med 2.2878 few 8.5365) lr 1.0000e-02 eta 1 day, 2:54:02
+epoch [1/20] batch [1050/3419] time 0.330 (1.439) data 0.000 (1.106) loss 4.6884 (4.0377) acc 21.0938 (28.8186) (mean 6.3720 many 2.0025 med 2.2878 few 8.2764) lr 1.0000e-02 eta 1 day, 2:54:19
+epoch [1/20] batch [1060/3419] time 0.331 (1.438) data 0.000 (1.106) loss 4.0810 (4.0441) acc 30.4688 (28.5374) (mean 6.4126 many 2.0025 med 2.2878 few 7.9842) lr 1.0000e-02 eta 1 day, 2:53:49
+epoch [1/20] batch [1070/3419] time 0.334 (1.439) data 0.000 (1.107) loss 3.7960 (3.9158) acc 30.4688 (29.9778) (mean 6.4611 many 2.0025 med 2.2499 few 7.8382) lr 1.0000e-02 eta 1 day, 2:54:25
+epoch [1/20] batch [1080/3419] time 0.330 (1.439) data 0.000 (1.107) loss 4.1310 (3.9643) acc 31.2500 (29.9454) (mean 6.5085 many 1.9524 med 2.2499 few 7.6412) lr 1.0000e-02 eta 1 day, 2:54:33
+epoch [1/20] batch [1090/3419] time 6.154 (1.441) data 5.818 (1.109) loss 3.6866 (3.8995) acc 29.6875 (30.6805) (mean 6.5559 many 1.9524 med 2.2142 few 7.6018) lr 1.0000e-02 eta 1 day, 2:56:23
+epoch [1/20] batch [1100/3419] time 0.329 (1.440) data 0.000 (1.107) loss 3.6896 (3.8557) acc 32.8125 (30.3207) (mean 6.5869 many 1.9524 med 2.2142 few 7.8099) lr 1.0000e-02 eta 1 day, 2:54:32
+epoch [1/20] batch [1110/3419] time 4.209 (1.441) data 3.876 (1.108) loss 3.9185 (3.8305) acc 28.1250 (30.3889) (mean 6.6371 many 1.8113 med 2.2142 few 7.0786) lr 1.0000e-02 eta 1 day, 2:55:29
+epoch [1/20] batch [1120/3419] time 0.331 (1.436) data 0.000 (1.103) loss 4.0773 (3.9832) acc 27.3438 (29.5787) (mean 6.6679 many 2.0605 med 2.1974 few 7.4990) lr 1.0000e-02 eta 1 day, 2:49:26
+epoch [1/20] batch [1130/3419] time 0.330 (1.437) data 0.000 (1.104) loss 3.8212 (4.0304) acc 31.2500 (28.9733) (mean 6.6940 many 2.0319 med 2.1974 few 7.8938) lr 1.0000e-02 eta 1 day, 2:50:33
+epoch [1/20] batch [1140/3419] time 0.331 (1.438) data 0.000 (1.105) loss 4.1166 (4.0403) acc 27.3438 (28.9294) (mean 6.7338 many 1.9705 med 2.4831 few 7.7740) lr 1.0000e-02 eta 1 day, 2:51:25
+epoch [1/20] batch [1150/3419] time 0.335 (1.438) data 0.000 (1.105) loss 3.9895 (4.0200) acc 33.5938 (29.9326) (mean 6.7762 many 1.9705 med 2.4288 few 8.2608) lr 1.0000e-02 eta 1 day, 2:50:47
+epoch [1/20] batch [1160/3419] time 0.332 (1.438) data 0.000 (1.106) loss 4.1536 (3.9871) acc 28.1250 (30.5030) (mean 6.8501 many 1.9153 med 2.4288 few 7.9163) lr 1.0000e-02 eta 1 day, 2:51:12
+epoch [1/20] batch [1170/3419] time 7.914 (1.440) data 7.581 (1.107) loss 4.2707 (3.9121) acc 28.1250 (30.8963) (mean 6.8945 many 1.8653 med 2.3799 few 7.7976) lr 1.0000e-02 eta 1 day, 2:52:57
+epoch [1/20] batch [1180/3419] time 0.329 (1.438) data 0.001 (1.106) loss 3.3498 (3.8588) acc 33.5938 (31.5881) (mean 6.9584 many 1.8465 med 2.3799 few 7.9511) lr 1.0000e-02 eta 1 day, 2:50:36
+epoch [1/20] batch [1190/3419] time 3.707 (1.439) data 3.374 (1.107) loss 3.8381 (3.9204) acc 31.2500 (30.5487) (mean 6.9988 many 1.7520 med 2.6657 few 7.9226) lr 1.0000e-02 eta 1 day, 2:51:24
+epoch [1/20] batch [1200/3419] time 0.331 (1.434) data 0.000 (1.102) loss 3.6948 (3.8481) acc 32.8125 (31.6748) (mean 7.0600 many 1.7117 med 2.6371 few 7.0081) lr 1.0000e-02 eta 1 day, 2:45:53
+epoch [1/20] batch [1210/3419] time 0.330 (1.435) data 0.000 (1.103) loss 3.6785 (3.8339) acc 26.5625 (30.5015) (mean 7.0817 many 1.8550 med 2.6371 few 6.8135) lr 1.0000e-02 eta 1 day, 2:46:32
+epoch [1/20] batch [1220/3419] time 0.330 (1.438) data 0.001 (1.106) loss 3.6466 (3.8911) acc 33.5938 (30.6976) (mean 7.1276 many 1.8077 med 2.6371 few 7.0787) lr 1.0000e-02 eta 1 day, 2:49:52
+epoch [1/20] batch [1230/3419] time 0.336 (1.435) data 0.000 (1.103) loss 3.5046 (3.8458) acc 32.0312 (30.8660) (mean 7.1776 many 1.8077 med 2.6114 few 7.6645) lr 1.0000e-02 eta 1 day, 2:46:25
+epoch [1/20] batch [1240/3419] time 0.333 (1.436) data 0.000 (1.103) loss 3.9655 (3.8693) acc 29.6875 (30.7688) (mean 7.2251 many 2.0214 med 2.6114 few 7.4955) lr 1.0000e-02 eta 1 day, 2:46:38
+epoch [1/20] batch [1250/3419] time 9.815 (1.440) data 9.480 (1.108) loss 3.6319 (3.7983) acc 30.4688 (31.8320) (mean 7.2846 many 2.0214 med 2.8971 few 7.9198) lr 1.0000e-02 eta 1 day, 2:51:07
+epoch [1/20] batch [1260/3419] time 0.329 (1.437) data 0.000 (1.104) loss 4.2786 (3.8264) acc 24.2188 (30.3022) (mean 7.3172 many 2.0214 med 2.8630 few 8.0319) lr 1.0000e-02 eta 1 day, 2:47:05
+epoch [1/20] batch [1270/3419] time 1.782 (1.437) data 1.454 (1.105) loss 3.9253 (3.8303) acc 28.1250 (30.3053) (mean 7.3499 many 1.9433 med 2.8075 few 8.7362) lr 1.0000e-02 eta 1 day, 2:47:07
+epoch [1/20] batch [1280/3419] time 0.331 (1.434) data 0.000 (1.101) loss 3.6309 (3.7102) acc 29.6875 (31.1565) (mean 7.3812 many 1.8730 med 2.8075 few 9.0214) lr 1.0000e-02 eta 1 day, 2:43:12
+epoch [1/20] batch [1290/3419] time 0.329 (1.432) data 0.000 (1.100) loss 3.7630 (3.8472) acc 34.3750 (29.6554) (mean 7.3918 many 1.8324 med 3.0932 few 9.2717) lr 1.0000e-02 eta 1 day, 2:41:38
+epoch [1/20] batch [1300/3419] time 0.333 (1.438) data 0.000 (1.105) loss 3.2923 (3.7693) acc 34.3750 (30.2678) (mean 7.4108 many 1.6999 med 3.0932 few 9.6468) lr 1.0000e-02 eta 1 day, 2:47:17
+epoch [1/20] batch [1310/3419] time 0.328 (1.435) data 0.000 (1.103) loss 4.4215 (3.8831) acc 24.2188 (30.8203) (mean 7.4571 many 1.9286 med 3.3789 few 10.2408) lr 1.0000e-02 eta 1 day, 2:44:26
+epoch [1/20] batch [1320/3419] time 0.334 (1.434) data 0.000 (1.102) loss 3.6965 (3.8614) acc 30.4688 (31.3272) (mean 7.5003 many 1.9286 med 3.3503 few 10.1312) lr 1.0000e-02 eta 1 day, 2:42:58
+epoch [1/20] batch [1330/3419] time 8.002 (1.438) data 7.667 (1.106) loss 3.4086 (3.6968) acc 36.7188 (32.5741) (mean 7.5478 many 1.9286 med 3.3272 few 10.1690) lr 1.0000e-02 eta 1 day, 2:46:49
+epoch [1/20] batch [1340/3419] time 0.329 (1.434) data 0.000 (1.102) loss 4.0276 (3.7704) acc 30.4688 (32.1318) (mean 7.5957 many 2.1049 med 3.2986 few 10.3828) lr 1.0000e-02 eta 1 day, 2:42:10
+epoch [1/20] batch [1350/3419] time 1.321 (1.435) data 0.994 (1.103) loss 3.8672 (3.7417) acc 32.8125 (32.6489) (mean 7.6454 many 2.3188 med 3.2486 few 9.7881) lr 1.0000e-02 eta 1 day, 2:43:19
+epoch [1/20] batch [1360/3419] time 0.335 (1.433) data 0.000 (1.100) loss 3.6304 (3.7812) acc 31.2500 (31.5033) (mean 7.6768 many 2.2256 med 3.2486 few 9.3180) lr 1.0000e-02 eta 1 day, 2:40:20
+epoch [1/20] batch [1370/3419] time 0.332 (1.431) data 0.000 (1.099) loss 3.8442 (3.8656) acc 30.4688 (28.9988) (mean 7.6625 many 2.0661 med 3.1779 few 8.5924) lr 1.0000e-02 eta 1 day, 2:38:42
+epoch [1/20] batch [1380/3419] time 0.331 (1.436) data 0.000 (1.104) loss 3.6637 (3.7553) acc 32.0312 (32.5310) (mean 7.7434 many 2.0661 med 3.0935 few 8.2767) lr 1.0000e-02 eta 1 day, 2:43:40
+epoch [1/20] batch [1390/3419] time 0.329 (1.433) data 0.000 (1.100) loss 3.6180 (3.6920) acc 35.9375 (32.8797) (mean 7.7778 many 1.9981 med 3.0614 few 7.8472) lr 1.0000e-02 eta 1 day, 2:39:37
+epoch [1/20] batch [1400/3419] time 0.333 (1.432) data 0.000 (1.100) loss 3.4960 (3.6526) acc 36.7188 (33.7045) (mean 7.8414 many 1.9370 med 3.0307 few 7.5518) lr 1.0000e-02 eta 1 day, 2:38:48
+epoch [1/20] batch [1410/3419] time 7.538 (1.436) data 7.202 (1.104) loss 3.4142 (3.6247) acc 36.7188 (33.2051) (mean 7.8929 many 1.9370 med 3.0099 few 7.2500) lr 1.0000e-02 eta 1 day, 2:43:13
+epoch [1/20] batch [1420/3419] time 0.328 (1.434) data 0.000 (1.102) loss 3.9552 (3.6784) acc 30.4688 (32.5437) (mean 7.9179 many 2.0628 med 3.2670 few 7.4926) lr 1.0000e-02 eta 1 day, 2:40:10
+epoch [1/20] batch [1430/3419] time 0.330 (1.434) data 0.000 (1.101) loss 3.8224 (3.7497) acc 31.2500 (31.1390) (mean 7.9369 many 1.9847 med 3.2385 few 8.2843) lr 1.0000e-02 eta 1 day, 2:39:36
+epoch [1/20] batch [1440/3419] time 0.331 (1.431) data 0.000 (1.098) loss 3.6247 (3.6333) acc 25.7812 (32.2763) (mean 7.9882 many 1.9400 med 3.2020 few 9.0514) lr 1.0000e-02 eta 1 day, 2:35:57
+epoch [1/20] batch [1450/3419] time 0.331 (1.430) data 0.000 (1.098) loss 3.8685 (3.7149) acc 28.1250 (31.3164) (mean 8.0072 many 2.1855 med 3.2020 few 9.1679) lr 1.0000e-02 eta 1 day, 2:35:10
+epoch [1/20] batch [1460/3419] time 0.332 (1.434) data 0.000 (1.102) loss 4.0823 (3.8136) acc 22.6562 (30.2654) (mean 8.0260 many 2.3377 med 3.2020 few 8.8262) lr 1.0000e-02 eta 1 day, 2:39:09
+epoch [1/20] batch [1470/3419] time 0.334 (1.432) data 0.000 (1.100) loss 3.6385 (3.6876) acc 30.4688 (31.6067) (mean 8.0565 many 2.4609 med 3.4303 few 8.3360) lr 1.0000e-02 eta 1 day, 2:37:16
+epoch [1/20] batch [1480/3419] time 0.334 (1.430) data 0.000 (1.098) loss 3.4496 (3.6864) acc 35.9375 (33.3150) (mean 8.1084 many 2.6666 med 3.3650 few 8.2982) lr 1.0000e-02 eta 1 day, 2:34:59
+epoch [1/20] batch [1490/3419] time 7.992 (1.435) data 7.656 (1.103) loss 3.3697 (3.6418) acc 35.1562 (33.2083) (mean 8.1471 many 2.6666 med 3.3463 few 8.0937) lr 1.0000e-02 eta 1 day, 2:39:27
+epoch [1/20] batch [1500/3419] time 0.329 (1.434) data 0.000 (1.102) loss 3.2178 (3.5988) acc 35.9375 (33.4149) (mean 8.1824 many 2.5291 med 3.6063 few 7.9223) lr 1.0000e-02 eta 1 day, 2:38:28
+epoch [1/20] batch [1510/3419] time 0.329 (1.432) data 0.000 (1.099) loss 3.7061 (3.6081) acc 35.9375 (34.0626) (mean 8.2425 many 2.5291 med 3.5787 few 7.7722) lr 1.0000e-02 eta 1 day, 2:35:28
+epoch [1/20] batch [1520/3419] time 0.331 (1.431) data 0.000 (1.099) loss 3.5678 (3.6952) acc 33.5938 (31.2702) (mean 8.2492 many 2.4422 med 3.5787 few 7.6678) lr 1.0000e-02 eta 1 day, 2:34:25
+epoch [1/20] batch [1530/3419] time 0.331 (1.428) data 0.000 (1.096) loss 3.8566 (3.7104) acc 32.8125 (32.3113) (mean 8.3012 many 2.2869 med 3.5635 few 7.7385) lr 1.0000e-02 eta 1 day, 2:30:57
+epoch [1/20] batch [1540/3419] time 0.332 (1.432) data 0.000 (1.100) loss 3.6082 (3.6401) acc 31.2500 (33.0195) (mean 8.3522 many 2.2088 med 3.5386 few 7.8439) lr 1.0000e-02 eta 1 day, 2:35:25
+epoch [1/20] batch [1550/3419] time 0.335 (1.432) data 0.000 (1.100) loss 3.5404 (3.5701) acc 37.5000 (34.5804) (mean 8.4218 many 2.3736 med 3.7726 few 7.6509) lr 1.0000e-02 eta 1 day, 2:34:56
+epoch [1/20] batch [1560/3419] time 0.333 (1.429) data 0.000 (1.096) loss 3.5864 (3.6677) acc 37.5000 (32.8518) (mean 8.4277 many 2.6139 med 3.7726 few 7.7524) lr 1.0000e-02 eta 1 day, 2:30:57
+epoch [1/20] batch [1570/3419] time 6.842 (1.433) data 6.507 (1.101) loss 3.4520 (3.5811) acc 33.5938 (34.1385) (mean 8.4912 many 2.6139 med 3.6983 few 8.6380) lr 1.0000e-02 eta 1 day, 2:35:26
+epoch [1/20] batch [1580/3419] time 0.329 (1.432) data 0.000 (1.100) loss 3.6991 (3.6446) acc 36.7188 (33.3476) (mean 8.5431 many 2.7113 med 3.6983 few 9.3238) lr 1.0000e-02 eta 1 day, 2:34:48
+epoch [1/20] batch [1590/3419] time 1.704 (1.430) data 1.375 (1.098) loss 3.5109 (3.6472) acc 37.5000 (34.0589) (mean 8.5948 many 2.7113 med 3.6983 few 9.4220) lr 1.0000e-02 eta 1 day, 2:32:02
+epoch [1/20] batch [1600/3419] time 0.331 (1.428) data 0.000 (1.096) loss 3.9760 (3.5987) acc 31.2500 (33.9994) (mean 8.6332 many 2.7113 med 3.6782 few 9.0819) lr 1.0000e-02 eta 1 day, 2:29:45
+epoch [1/20] batch [1610/3419] time 0.330 (1.427) data 0.000 (1.095) loss 4.0057 (3.6466) acc 28.1250 (33.3746) (mean 8.6866 many 2.6990 med 3.6454 few 9.3849) lr 1.0000e-02 eta 1 day, 2:28:08
+epoch [1/20] batch [1620/3419] time 0.331 (1.430) data 0.000 (1.098) loss 3.5454 (3.6821) acc 39.0625 (32.9038) (mean 8.7247 many 2.6705 med 3.6454 few 10.0617) lr 1.0000e-02 eta 1 day, 2:31:19
+epoch [1/20] batch [1630/3419] time 0.334 (1.430) data 0.000 (1.097) loss 3.9660 (3.5954) acc 32.0312 (35.1519) (mean 8.7901 many 2.7514 med 3.6273 few 10.8838) lr 1.0000e-02 eta 1 day, 2:30:21
+epoch [1/20] batch [1640/3419] time 0.331 (1.429) data 0.000 (1.097) loss 3.5300 (3.5687) acc 35.9375 (34.4190) (mean 8.8308 many 2.8857 med 3.5059 few 11.3729) lr 1.0000e-02 eta 1 day, 2:29:20
+epoch [1/20] batch [1650/3419] time 5.897 (1.430) data 5.563 (1.098) loss 3.5537 (3.5868) acc 37.5000 (33.7670) (mean 8.8657 many 3.0067 med 3.5059 few 10.9760) lr 1.0000e-02 eta 1 day, 2:30:57
+epoch [1/20] batch [1660/3419] time 0.329 (1.430) data 0.000 (1.097) loss 3.5001 (3.5257) acc 39.0625 (34.8598) (mean 8.9036 many 3.3193 med 3.4319 few 11.4957) lr 1.0000e-02 eta 1 day, 2:29:38
+epoch [1/20] batch [1670/3419] time 2.973 (1.429) data 2.640 (1.097) loss 4.0411 (3.6229) acc 25.0000 (33.8765) (mean 8.9437 many 3.4918 med 3.4319 few 12.0033) lr 1.0000e-02 eta 1 day, 2:29:18
+epoch [1/20] batch [1680/3419] time 0.331 (1.428) data 0.000 (1.095) loss 3.2801 (3.5450) acc 37.5000 (34.6693) (mean 8.9959 many 3.4918 med 3.4319 few 12.2573) lr 1.0000e-02 eta 1 day, 2:26:58
+epoch [1/20] batch [1690/3419] time 0.330 (1.427) data 0.000 (1.095) loss 3.6064 (3.4412) acc 36.7188 (36.6681) (mean 9.0532 many 3.1611 med 3.4319 few 12.4717) lr 1.0000e-02 eta 1 day, 2:25:46
+epoch [1/20] batch [1700/3419] time 0.332 (1.428) data 0.000 (1.096) loss 3.9925 (3.5820) acc 28.1250 (34.6471) (mean 9.0956 many 3.3411 med 3.4319 few 12.5537) lr 1.0000e-02 eta 1 day, 2:27:32
+epoch [1/20] batch [1710/3419] time 0.334 (1.429) data 0.000 (1.096) loss 3.7888 (3.6195) acc 32.8125 (33.0493) (mean 9.1158 many 3.3300 med 3.7013 few 12.5201) lr 1.0000e-02 eta 1 day, 2:27:21
+epoch [1/20] batch [1720/3419] time 0.331 (1.427) data 0.000 (1.095) loss 3.3776 (3.4615) acc 34.3750 (34.6918) (mean 9.1684 many 3.4920 med 4.2442 few 12.7293) lr 1.0000e-02 eta 1 day, 2:25:06
+epoch [1/20] batch [1730/3419] time 6.231 (1.429) data 5.896 (1.097) loss 3.7759 (3.5440) acc 32.0312 (33.9432) (mean 9.2142 many 3.7761 med 4.2295 few 12.2140) lr 1.0000e-02 eta 1 day, 2:27:47
+epoch [1/20] batch [1740/3419] time 0.330 (1.429) data 0.000 (1.097) loss 3.6026 (3.5004) acc 28.1250 (33.6876) (mean 9.2496 many 3.7761 med 4.2295 few 12.1938) lr 1.0000e-02 eta 1 day, 2:27:08
+epoch [1/20] batch [1750/3419] time 1.426 (1.428) data 1.098 (1.096) loss 3.6538 (3.5267) acc 32.0312 (33.3319) (mean 9.2741 many 3.7091 med 4.2295 few 12.0978) lr 1.0000e-02 eta 1 day, 2:25:18
+epoch [1/20] batch [1760/3419] time 0.331 (1.427) data 0.000 (1.095) loss 3.3899 (3.5702) acc 39.0625 (33.2189) (mean 9.2988 many 3.8403 med 4.2295 few 11.3061) lr 1.0000e-02 eta 1 day, 2:24:13
+epoch [1/20] batch [1770/3419] time 0.330 (1.424) data 0.000 (1.092) loss 3.2655 (3.5219) acc 35.9375 (34.0011) (mean 9.3248 many 3.6124 med 4.1606 few 10.8918) lr 1.0000e-02 eta 1 day, 2:21:24
+epoch [1/20] batch [1780/3419] time 0.331 (1.427) data 0.000 (1.095) loss 3.2610 (3.4968) acc 36.7188 (34.5574) (mean 9.3664 many 3.6931 med 4.1275 few 11.1881) lr 1.0000e-02 eta 1 day, 2:23:57
+epoch [1/20] batch [1790/3419] time 0.329 (1.428) data 0.000 (1.096) loss 3.2105 (3.4495) acc 37.5000 (34.0093) (mean 9.3959 many 4.0888 med 4.1138 few 11.0488) lr 1.0000e-02 eta 1 day, 2:24:27
+epoch [1/20] batch [1800/3419] time 0.333 (1.425) data 0.000 (1.093) loss 3.4270 (3.4933) acc 37.5000 (33.6272) (mean 9.4098 many 4.6866 med 4.1138 few 10.3511) lr 1.0000e-02 eta 1 day, 2:21:45
+epoch [1/20] batch [1810/3419] time 6.656 (1.428) data 6.321 (1.096) loss 3.8186 (3.5432) acc 28.1250 (34.3919) (mean 9.4595 many 4.5102 med 4.1138 few 10.4596) lr 1.0000e-02 eta 1 day, 2:24:50
+epoch [1/20] batch [1820/3419] time 0.329 (1.428) data 0.000 (1.096) loss 3.1927 (3.5070) acc 42.1875 (34.4370) (mean 9.4837 many 4.5102 med 4.0595 few 10.5166) lr 1.0000e-02 eta 1 day, 2:23:48
+epoch [1/20] batch [1830/3419] time 1.712 (1.426) data 1.382 (1.094) loss 3.4836 (3.4910) acc 36.7188 (34.4395) (mean 9.5319 many 4.9129 med 4.0199 few 10.7325) lr 1.0000e-02 eta 1 day, 2:21:56
+epoch [1/20] batch [1840/3419] time 0.332 (1.426) data 0.000 (1.094) loss 3.4155 (3.4994) acc 36.7188 (36.0606) (mean 9.6076 many 4.9961 med 4.0099 few 10.6164) lr 1.0000e-02 eta 1 day, 2:21:24
+epoch [1/20] batch [1850/3419] time 0.329 (1.424) data 0.000 (1.092) loss 3.6185 (3.5445) acc 32.0312 (34.6602) (mean 9.6362 many 4.8132 med 4.2867 few 10.5573) lr 1.0000e-02 eta 1 day, 2:19:07
+epoch [1/20] batch [1860/3419] time 0.330 (1.427) data 0.000 (1.095) loss 3.6352 (3.5247) acc 32.8125 (34.7446) (mean 9.6797 many 4.8132 med 4.5724 few 10.5569) lr 1.0000e-02 eta 1 day, 2:21:30
+epoch [1/20] batch [1870/3419] time 0.330 (1.426) data 0.000 (1.094) loss 3.5228 (3.5755) acc 37.5000 (33.6977) (mean 9.6966 many 4.6449 med 4.8295 few 9.9802) lr 1.0000e-02 eta 1 day, 2:21:10
+epoch [1/20] batch [1880/3419] time 1.151 (1.425) data 0.824 (1.093) loss 3.8358 (3.5638) acc 28.9062 (34.8476) (mean 9.7580 many 4.6449 med 4.8295 few 9.6316) lr 1.0000e-02 eta 1 day, 2:19:10
+epoch [1/20] batch [1890/3419] time 6.552 (1.427) data 6.219 (1.095) loss 3.6447 (3.5048) acc 32.0312 (34.9077) (mean 9.8079 many 4.7687 med 4.7918 few 9.2016) lr 1.0000e-02 eta 1 day, 2:21:44
+epoch [1/20] batch [1900/3419] time 0.331 (1.427) data 0.000 (1.095) loss 3.3092 (3.5007) acc 35.1562 (34.3925) (mean 9.8376 many 4.5944 med 4.7918 few 9.7196) lr 1.0000e-02 eta 1 day, 2:21:02
+epoch [1/20] batch [1910/3419] time 0.677 (1.426) data 0.350 (1.094) loss 3.5509 (3.4650) acc 35.1562 (35.1702) (mean 9.8725 many 4.6865 med 5.0565 few 9.2655) lr 1.0000e-02 eta 1 day, 2:19:20
+epoch [1/20] batch [1920/3419] time 0.332 (1.425) data 0.000 (1.093) loss 3.7791 (3.4937) acc 31.2500 (35.1863) (mean 9.9179 many 4.5204 med 5.2071 few 10.0973) lr 1.0000e-02 eta 1 day, 2:17:59
+epoch [1/20] batch [1930/3419] time 0.330 (1.423) data 0.000 (1.091) loss 3.7311 (3.4892) acc 33.5938 (34.7761) (mean 9.9363 many 4.5204 med 5.1187 few 10.5493) lr 1.0000e-02 eta 1 day, 2:16:15
+epoch [1/20] batch [1940/3419] time 0.330 (1.427) data 0.000 (1.095) loss 3.1072 (3.3755) acc 35.9375 (35.5565) (mean 9.9702 many 4.5204 med 5.1187 few 10.1746) lr 1.0000e-02 eta 1 day, 2:19:40
+epoch [1/20] batch [1950/3419] time 0.334 (1.425) data 0.000 (1.094) loss 2.9325 (3.3784) acc 42.9688 (36.4385) (mean 10.0311 many 4.4936 med 5.1187 few 9.4914) lr 1.0000e-02 eta 1 day, 2:18:15
+epoch [1/20] batch [1960/3419] time 0.433 (1.424) data 0.104 (1.092) loss 3.2573 (3.3993) acc 35.1562 (36.4338) (mean 10.0610 many 4.7793 med 5.3039 few 8.8710) lr 1.0000e-02 eta 1 day, 2:16:39
+epoch [1/20] batch [1970/3419] time 9.747 (1.428) data 9.411 (1.096) loss 3.4116 (3.3844) acc 36.7188 (36.5957) (mean 10.1233 many 4.9629 med 5.2784 few 8.6868) lr 1.0000e-02 eta 1 day, 2:20:20
+epoch [1/20] batch [1980/3419] time 0.329 (1.426) data 0.000 (1.094) loss 3.3615 (3.4353) acc 35.9375 (35.5304) (mean 10.1454 many 4.5420 med 5.2784 few 9.8366) lr 1.0000e-02 eta 1 day, 2:17:36
+epoch [1/20] batch [1990/3419] time 0.329 (1.426) data 0.000 (1.094) loss 3.4169 (3.3667) acc 37.5000 (35.9683) (mean 10.1805 many 4.5420 med 5.2784 few 10.4889) lr 1.0000e-02 eta 1 day, 2:17:26
+epoch [1/20] batch [2000/3419] time 0.331 (1.424) data 0.000 (1.092) loss 3.4004 (3.3752) acc 39.0625 (37.1456) (mean 10.2704 many 4.4231 med 5.2309 few 11.8346) lr 1.0000e-02 eta 1 day, 2:14:54
+epoch [1/20] batch [2010/3419] time 0.331 (1.423) data 0.000 (1.091) loss 3.1775 (3.3707) acc 36.7188 (37.8831) (mean 10.3454 many 4.4231 med 5.5166 few 12.0515) lr 1.0000e-02 eta 1 day, 2:14:19
+epoch [1/20] batch [2020/3419] time 0.331 (1.427) data 0.000 (1.095) loss 2.8194 (3.3617) acc 43.7500 (37.5362) (mean 10.3995 many 4.7088 med 5.4227 few 12.1831) lr 1.0000e-02 eta 1 day, 2:17:46
+epoch [1/20] batch [2030/3419] time 0.332 (1.424) data 0.000 (1.092) loss 2.9884 (3.3325) acc 41.4062 (37.0324) (mean 10.4474 many 4.7088 med 5.3996 few 11.9030) lr 1.0000e-02 eta 1 day, 2:14:46
+epoch [1/20] batch [2040/3419] time 0.332 (1.424) data 0.000 (1.092) loss 3.2993 (3.3938) acc 39.8438 (35.8414) (mean 10.4630 many 4.4679 med 5.3310 few 11.0009) lr 1.0000e-02 eta 1 day, 2:14:15
+epoch [1/20] batch [2050/3419] time 10.253 (1.427) data 9.918 (1.095) loss 3.4816 (3.4009) acc 35.1562 (35.6512) (mean 10.4884 many 4.4679 med 5.8165 few 10.9516) lr 1.0000e-02 eta 1 day, 2:17:14
+epoch [1/20] batch [2060/3419] time 0.329 (1.425) data 0.000 (1.093) loss 3.4765 (3.3976) acc 32.0312 (35.2868) (mean 10.5076 many 4.4679 med 6.0647 few 11.6643) lr 1.0000e-02 eta 1 day, 2:15:04
+epoch [1/20] batch [2070/3419] time 0.329 (1.424) data 0.001 (1.092) loss 3.1574 (3.3832) acc 32.8125 (35.3507) (mean 10.5418 many 4.6426 med 6.0647 few 11.0910) lr 1.0000e-02 eta 1 day, 2:14:05
+epoch [1/20] batch [2080/3419] time 0.332 (1.423) data 0.000 (1.091) loss 3.1561 (3.3920) acc 39.8438 (36.1113) (mean 10.5804 many 4.5559 med 6.0647 few 11.4502) lr 1.0000e-02 eta 1 day, 2:12:01
+epoch [1/20] batch [2090/3419] time 0.330 (1.422) data 0.000 (1.090) loss 3.5471 (3.4325) acc 26.5625 (34.6024) (mean 10.6069 many 4.5559 med 5.9874 few 12.0425) lr 1.0000e-02 eta 1 day, 2:11:10
+epoch [1/20] batch [2100/3419] time 0.330 (1.426) data 0.001 (1.094) loss 3.0657 (3.2709) acc 46.0938 (36.8281) (mean 10.6504 many 4.3558 med 5.9100 few 13.3967) lr 1.0000e-02 eta 1 day, 2:14:44
+epoch [1/20] batch [2110/3419] time 0.330 (1.423) data 0.000 (1.092) loss 3.2354 (3.3113) acc 39.0625 (37.8640) (mean 10.7000 many 4.2521 med 5.8907 few 14.1486) lr 1.0000e-02 eta 1 day, 2:12:10
+epoch [1/20] batch [2120/3419] time 0.333 (1.423) data 0.000 (1.091) loss 3.8118 (3.4048) acc 28.1250 (36.3075) (mean 10.7529 many 4.0966 med 5.8531 few 13.8599) lr 1.0000e-02 eta 1 day, 2:11:36
+epoch [1/20] batch [2130/3419] time 9.772 (1.426) data 9.437 (1.094) loss 3.3883 (3.3292) acc 37.5000 (36.2970) (mean 10.7829 many 4.5280 med 5.7762 few 14.8139) lr 1.0000e-02 eta 1 day, 2:14:38
+epoch [1/20] batch [2140/3419] time 0.329 (1.424) data 0.000 (1.092) loss 3.6249 (3.3063) acc 37.5000 (36.1089) (mean 10.8159 many 4.3657 med 5.7655 few 13.7125) lr 1.0000e-02 eta 1 day, 2:12:13
+epoch [1/20] batch [2150/3419] time 0.330 (1.424) data 0.000 (1.092) loss 3.3908 (3.2780) acc 36.7188 (37.2925) (mean 10.8590 many 4.6794 med 6.0329 few 13.4043) lr 1.0000e-02 eta 1 day, 2:12:05
+epoch [1/20] batch [2160/3419] time 0.334 (1.423) data 0.000 (1.091) loss 3.1447 (3.3374) acc 35.1562 (35.2026) (mean 10.8775 many 4.6794 med 6.4306 few 13.4685) lr 1.0000e-02 eta 1 day, 2:10:13
+epoch [1/20] batch [2170/3419] time 0.330 (1.422) data 0.000 (1.090) loss 3.2909 (3.3371) acc 34.3750 (34.9573) (mean 10.8995 many 4.9478 med 6.4132 few 13.2409) lr 1.0000e-02 eta 1 day, 2:09:12
+epoch [1/20] batch [2180/3419] time 0.332 (1.424) data 0.000 (1.093) loss 3.2100 (3.3738) acc 34.3750 (35.1719) (mean 10.9106 many 4.9180 med 6.3704 few 13.9878) lr 1.0000e-02 eta 1 day, 2:11:35
+epoch [1/20] batch [2190/3419] time 0.330 (1.423) data 0.000 (1.091) loss 3.3472 (3.3672) acc 35.1562 (35.5840) (mean 10.9460 many 5.2271 med 6.5398 few 13.7743) lr 1.0000e-02 eta 1 day, 2:10:09
+epoch [1/20] batch [2200/3419] time 2.289 (1.423) data 1.953 (1.091) loss 3.4866 (3.3647) acc 35.9375 (34.8158) (mean 10.9561 many 5.4209 med 6.7857 few 13.7652) lr 1.0000e-02 eta 1 day, 2:09:54
+epoch [1/20] batch [2210/3419] time 10.678 (1.426) data 10.343 (1.094) loss 3.1215 (3.3576) acc 39.0625 (35.3931) (mean 10.9884 many 5.5837 med 6.8954 few 13.6841) lr 1.0000e-02 eta 1 day, 2:12:18
+epoch [1/20] batch [2220/3419] time 0.440 (1.423) data 0.112 (1.091) loss 2.9350 (3.2803) acc 39.8438 (37.0694) (mean 11.0680 many 5.9046 med 7.1811 few 14.3501) lr 1.0000e-02 eta 1 day, 2:09:12
+epoch [1/20] batch [2230/3419] time 0.330 (1.424) data 0.000 (1.092) loss 3.2511 (3.3172) acc 33.5938 (34.9089) (mean 11.0834 many 6.1934 med 7.1811 few 14.5269) lr 1.0000e-02 eta 1 day, 2:09:36
+epoch [1/20] batch [2240/3419] time 0.332 (1.421) data 0.000 (1.090) loss 3.3741 (3.2811) acc 33.5938 (36.0814) (mean 11.1108 many 6.0489 med 7.1811 few 15.2605) lr 1.0000e-02 eta 1 day, 2:06:57
+epoch [1/20] batch [2250/3419] time 0.330 (1.422) data 0.000 (1.090) loss 2.6821 (3.2235) acc 46.0938 (37.6973) (mean 11.1636 many 6.0489 med 7.6109 few 15.2977) lr 1.0000e-02 eta 1 day, 2:06:51
+epoch [1/20] batch [2260/3419] time 0.330 (1.424) data 0.000 (1.093) loss 3.5752 (3.3015) acc 36.7188 (36.9815) (mean 11.1962 many 6.0489 med 7.4687 few 15.9396) lr 1.0000e-02 eta 1 day, 2:09:42
+epoch [1/20] batch [2270/3419] time 0.330 (1.423) data 0.000 (1.091) loss 3.4645 (3.2713) acc 34.3750 (38.2738) (mean 11.2516 many 6.0489 med 7.6561 few 16.0871) lr 1.0000e-02 eta 1 day, 2:07:38
+epoch [1/20] batch [2280/3419] time 0.408 (1.422) data 0.081 (1.091) loss 3.4470 (3.4095) acc 36.7188 (35.5776) (mean 11.2723 many 6.1774 med 7.6561 few 15.5754) lr 1.0000e-02 eta 1 day, 2:06:59
+epoch [1/20] batch [2290/3419] time 9.510 (1.425) data 9.175 (1.093) loss 3.4329 (3.3244) acc 35.1562 (36.8171) (mean 11.3221 many 6.1489 med 8.0140 few 15.4527) lr 1.0000e-02 eta 1 day, 2:09:44
+epoch [1/20] batch [2300/3419] time 0.385 (1.422) data 0.057 (1.091) loss 3.4821 (3.1999) acc 40.6250 (38.5139) (mean 11.3785 many 6.3746 med 8.0013 few 14.6457) lr 1.0000e-02 eta 1 day, 2:06:33
+epoch [1/20] batch [2310/3419] time 0.330 (1.423) data 0.000 (1.091) loss 3.5243 (3.2545) acc 26.5625 (36.7706) (mean 11.3956 many 6.3746 med 8.2474 few 14.5883) lr 1.0000e-02 eta 1 day, 2:06:29
+epoch [1/20] batch [2320/3419] time 0.334 (1.422) data 0.000 (1.090) loss 3.3974 (3.3001) acc 32.8125 (35.3989) (mean 11.4003 many 6.3277 med 8.2188 few 14.4738) lr 1.0000e-02 eta 1 day, 2:05:38
+epoch [1/20] batch [2330/3419] time 0.330 (1.422) data 0.000 (1.090) loss 3.2227 (3.2742) acc 40.6250 (36.2732) (mean 11.4357 many 6.2833 med 8.6627 few 15.3581) lr 1.0000e-02 eta 1 day, 2:05:30
+epoch [1/20] batch [2340/3419] time 0.332 (1.423) data 0.000 (1.092) loss 3.3748 (3.3467) acc 35.1562 (34.8481) (mean 11.4491 many 6.2833 med 8.7952 few 15.2803) lr 1.0000e-02 eta 1 day, 2:06:39
+epoch [1/20] batch [2350/3419] time 0.329 (1.423) data 0.000 (1.091) loss 3.1151 (3.2421) acc 41.4062 (37.8272) (mean 11.5208 many 6.1663 med 8.9561 few 14.5736) lr 1.0000e-02 eta 1 day, 2:05:40
+epoch [1/20] batch [2360/3419] time 4.177 (1.423) data 3.842 (1.091) loss 3.5378 (3.3633) acc 35.9375 (36.7480) (mean 11.5734 many 6.3467 med 9.1999 few 15.2484) lr 1.0000e-02 eta 1 day, 2:05:32
+epoch [1/20] batch [2370/3419] time 7.150 (1.424) data 6.815 (1.092) loss 3.2681 (3.3834) acc 34.3750 (34.5768) (mean 11.5966 many 6.2519 med 9.2768 few 15.1758) lr 1.0000e-02 eta 1 day, 2:06:37
+epoch [1/20] batch [2380/3419] time 2.427 (1.423) data 2.092 (1.091) loss 2.8883 (3.2801) acc 40.6250 (35.9557) (mean 11.6370 many 6.0855 med 9.4087 few 15.1669) lr 1.0000e-02 eta 1 day, 2:04:45
+epoch [1/20] batch [2390/3419] time 0.330 (1.423) data 0.000 (1.091) loss 3.2216 (3.2143) acc 39.0625 (37.7929) (mean 11.6965 many 5.9082 med 9.4087 few 14.6142) lr 1.0000e-02 eta 1 day, 2:04:38
+epoch [1/20] batch [2400/3419] time 0.333 (1.422) data 0.000 (1.091) loss 3.4071 (3.2938) acc 33.5938 (37.0723) (mean 11.7451 many 5.8229 med 9.6148 few 15.1040) lr 1.0000e-02 eta 1 day, 2:04:14
+epoch [1/20] batch [2410/3419] time 0.329 (1.422) data 0.000 (1.090) loss 3.4319 (3.2190) acc 31.2500 (37.1041) (mean 11.7772 many 6.0318 med 9.6148 few 14.1846) lr 1.0000e-02 eta 1 day, 2:03:26
+epoch [1/20] batch [2420/3419] time 0.332 (1.424) data 0.000 (1.092) loss 3.3779 (3.3017) acc 33.5938 (36.8223) (mean 11.8218 many 5.9477 med 9.6148 few 13.9140) lr 1.0000e-02 eta 1 day, 2:05:16
+epoch [1/20] batch [2430/3419] time 0.329 (1.423) data 0.000 (1.091) loss 3.1274 (3.2636) acc 36.7188 (37.2250) (mean 11.8610 many 5.7882 med 9.6148 few 14.2168) lr 1.0000e-02 eta 1 day, 2:04:19
+epoch [1/20] batch [2440/3419] time 0.333 (1.422) data 0.000 (1.090) loss 3.8861 (3.2125) acc 25.7812 (38.0031) (mean 11.9220 many 5.7636 med 9.6045 few 14.5645) lr 1.0000e-02 eta 1 day, 2:02:47
+epoch [1/20] batch [2450/3419] time 9.438 (1.425) data 9.103 (1.093) loss 3.1875 (3.2247) acc 35.9375 (36.9166) (mean 11.9484 many 5.5780 med 9.2474 few 15.0812) lr 1.0000e-02 eta 1 day, 2:05:41
+epoch [1/20] batch [2460/3419] time 3.299 (1.422) data 2.965 (1.091) loss 3.3824 (3.2547) acc 35.1562 (36.8726) (mean 11.9595 many 5.6498 med 9.1189 few 14.6568) lr 1.0000e-02 eta 1 day, 2:02:35
+epoch [1/20] batch [2470/3419] time 0.331 (1.423) data 0.000 (1.091) loss 3.5008 (3.2346) acc 35.9375 (37.6534) (mean 12.0222 many 5.5786 med 9.2890 few 14.6819) lr 1.0000e-02 eta 1 day, 2:03:03
+epoch [1/20] batch [2480/3419] time 0.333 (1.422) data 0.000 (1.090) loss 2.8849 (3.2370) acc 48.4375 (37.8297) (mean 12.0752 many 6.0006 med 9.2005 few 14.2039) lr 1.0000e-02 eta 1 day, 2:01:46
+epoch [1/20] batch [2490/3419] time 0.329 (1.422) data 0.000 (1.090) loss 3.1585 (3.1555) acc 41.4062 (39.1078) (mean 12.1465 many 6.4659 med 9.0911 few 14.0661) lr 1.0000e-02 eta 1 day, 2:01:35
+epoch [1/20] batch [2500/3419] time 0.330 (1.424) data 0.000 (1.092) loss 3.5237 (3.2209) acc 33.5938 (38.8183) (mean 12.2090 many 6.5680 med 9.3684 few 14.0236) lr 1.0000e-02 eta 1 day, 2:03:38
+epoch [1/20] batch [2510/3419] time 0.329 (1.423) data 0.000 (1.092) loss 3.4620 (3.2505) acc 32.8125 (37.2481) (mean 12.2341 many 6.9668 med 9.3684 few 14.7504) lr 1.0000e-02 eta 1 day, 2:02:35
+epoch [1/20] batch [2520/3419] time 0.332 (1.422) data 0.000 (1.091) loss 3.6412 (3.3064) acc 33.5938 (35.5623) (mean 12.2378 many 6.9682 med 9.5993 few 14.4463) lr 1.0000e-02 eta 1 day, 2:01:24
+epoch [1/20] batch [2530/3419] time 7.954 (1.425) data 7.621 (1.093) loss 3.3682 (3.2689) acc 41.4062 (37.8637) (mean 12.3223 many 6.9682 med 9.6622 few 14.6046) lr 1.0000e-02 eta 1 day, 2:03:32
+epoch [1/20] batch [2540/3419] time 4.368 (1.422) data 4.033 (1.090) loss 3.1452 (3.2783) acc 32.0312 (36.7231) (mean 12.3407 many 7.0343 med 9.6414 few 14.0884) lr 1.0000e-02 eta 1 day, 2:00:24
+epoch [1/20] batch [2550/3419] time 0.331 (1.423) data 0.000 (1.091) loss 3.3661 (3.3495) acc 33.5938 (35.3768) (mean 12.3527 many 7.2752 med 9.9134 few 13.7241) lr 1.0000e-02 eta 1 day, 2:01:16
+epoch [1/20] batch [2560/3419] time 0.335 (1.422) data 0.000 (1.090) loss 2.6406 (3.1369) acc 47.6562 (38.4438) (mean 12.4082 many 7.2466 med 9.9134 few 13.9544) lr 1.0000e-02 eta 1 day, 1:59:59
+epoch [1/20] batch [2570/3419] time 0.329 (1.422) data 0.000 (1.090) loss 3.0229 (3.1111) acc 37.5000 (38.2964) (mean 12.4505 many 7.0119 med 10.1787 few 13.8732) lr 1.0000e-02 eta 1 day, 1:59:40
+epoch [1/20] batch [2580/3419] time 0.330 (1.424) data 0.000 (1.092) loss 3.2158 (3.1406) acc 37.5000 (38.7866) (mean 12.4987 many 6.8994 med 10.3960 few 14.6108) lr 1.0000e-02 eta 1 day, 2:01:49
+epoch [1/20] batch [2590/3419] time 0.329 (1.423) data 0.000 (1.091) loss 2.9988 (3.1959) acc 35.9375 (36.6942) (mean 12.5232 many 6.8994 med 10.3960 few 15.2085) lr 1.0000e-02 eta 1 day, 2:00:35
+epoch [1/20] batch [2600/3419] time 0.334 (1.423) data 0.000 (1.091) loss 3.3431 (3.1605) acc 32.0312 (36.7716) (mean 12.5372 many 6.8857 med 10.5377 few 14.5719) lr 1.0000e-02 eta 1 day, 1:59:34
+epoch [1/20] batch [2610/3419] time 8.695 (1.425) data 8.360 (1.093) loss 3.0604 (3.0822) acc 38.2812 (39.9519) (mean 12.6195 many 6.8857 med 10.7341 few 14.7160) lr 1.0000e-02 eta 1 day, 2:01:59
+epoch [1/20] batch [2620/3419] time 1.398 (1.421) data 1.070 (1.089) loss 2.9049 (3.0946) acc 39.8438 (38.0712) (mean 12.6646 many 6.9120 med 10.7341 few 14.4393) lr 1.0000e-02 eta 1 day, 1:57:37
+epoch [1/20] batch [2630/3419] time 0.331 (1.423) data 0.000 (1.091) loss 3.0229 (3.1959) acc 38.2812 (36.9716) (mean 12.6848 many 7.2017 med 11.0662 few 14.3086) lr 1.0000e-02 eta 1 day, 1:59:25
+epoch [1/20] batch [2640/3419] time 0.334 (1.422) data 0.001 (1.090) loss 2.8310 (3.0669) acc 46.8750 (40.2752) (mean 12.7829 many 7.5751 med 10.9510 few 14.9586) lr 1.0000e-02 eta 1 day, 1:58:03
+epoch [1/20] batch [2650/3419] time 0.330 (1.421) data 0.000 (1.089) loss 2.9800 (3.0703) acc 39.0625 (39.9764) (mean 12.8295 many 7.5208 med 10.9510 few 15.7503) lr 1.0000e-02 eta 1 day, 1:56:56
+epoch [1/20] batch [2660/3419] time 0.332 (1.424) data 0.000 (1.092) loss 3.0538 (3.0419) acc 39.0625 (41.4333) (mean 12.9032 many 7.5208 med 10.8675 few 15.5715) lr 1.0000e-02 eta 1 day, 1:59:21
+epoch [1/20] batch [2670/3419] time 0.329 (1.422) data 0.000 (1.091) loss 3.3560 (3.2240) acc 36.7188 (38.3954) (mean 12.9215 many 7.5929 med 10.7274 few 16.0472) lr 1.0000e-02 eta 1 day, 1:57:48
+epoch [1/20] batch [2680/3419] time 0.334 (1.422) data 0.000 (1.090) loss 3.1177 (3.1937) acc 40.6250 (37.5212) (mean 12.9500 many 7.7304 med 10.7105 few 15.3997) lr 1.0000e-02 eta 1 day, 1:57:20
+epoch [1/20] batch [2690/3419] time 10.017 (1.425) data 9.682 (1.093) loss 3.0893 (3.1884) acc 42.9688 (37.2587) (mean 12.9630 many 7.7232 med 10.6784 few 16.4989) lr 1.0000e-02 eta 1 day, 1:59:43
+epoch [1/20] batch [2700/3419] time 1.963 (1.421) data 1.634 (1.089) loss 3.3809 (3.1538) acc 33.5938 (37.0653) (mean 13.0031 many 7.7232 med 10.6496 few 16.8081) lr 1.0000e-02 eta 1 day, 1:55:43
+epoch [1/20] batch [2710/3419] time 0.331 (1.423) data 0.000 (1.091) loss 3.0940 (3.1145) acc 36.7188 (38.6107) (mean 13.0386 many 7.8268 med 10.6496 few 17.0544) lr 1.0000e-02 eta 1 day, 1:57:04
+epoch [1/20] batch [2720/3419] time 0.334 (1.422) data 0.000 (1.090) loss 3.4567 (3.1012) acc 33.5938 (38.6583) (mean 13.1031 many 8.0619 med 10.6087 few 16.6850) lr 1.0000e-02 eta 1 day, 1:55:58
+epoch [1/20] batch [2730/3419] time 0.331 (1.421) data 0.000 (1.089) loss 2.8683 (3.1086) acc 37.5000 (37.4192) (mean 13.1152 many 8.1551 med 10.5719 few 15.8780) lr 1.0000e-02 eta 1 day, 1:54:41
+epoch [1/20] batch [2740/3419] time 0.332 (1.423) data 0.000 (1.092) loss 2.9665 (3.1998) acc 38.2812 (36.4741) (mean 13.1431 many 8.2322 med 10.8389 few 15.2815) lr 1.0000e-02 eta 1 day, 1:57:01
+epoch [1/20] batch [2750/3419] time 0.329 (1.422) data 0.000 (1.090) loss 3.2724 (3.1570) acc 34.3750 (38.3083) (mean 13.2018 many 8.3510 med 10.8389 few 15.5170) lr 1.0000e-02 eta 1 day, 1:55:28
+epoch [1/20] batch [2760/3419] time 0.332 (1.422) data 0.000 (1.090) loss 3.1064 (3.1464) acc 32.0312 (38.0128) (mean 13.2233 many 8.3510 med 10.8004 few 16.2015) lr 1.0000e-02 eta 1 day, 1:54:48
+epoch [1/20] batch [2770/3419] time 9.366 (1.424) data 9.033 (1.092) loss 3.3357 (3.1082) acc 37.5000 (39.2178) (mean 13.3033 many 7.9909 med 10.7745 few 16.4681) lr 1.0000e-02 eta 1 day, 1:56:56
+epoch [1/20] batch [2780/3419] time 3.153 (1.421) data 2.817 (1.089) loss 3.1742 (3.2107) acc 31.2500 (37.4864) (mean 13.3397 many 7.7157 med 10.5899 few 15.4160) lr 1.0000e-02 eta 1 day, 1:53:32
+epoch [1/20] batch [2790/3419] time 0.331 (1.422) data 0.000 (1.091) loss 3.0480 (3.1410) acc 42.1875 (39.4403) (mean 13.4110 many 7.7157 med 10.5899 few 15.6352) lr 1.0000e-02 eta 1 day, 1:54:59
+epoch [1/20] batch [2800/3419] time 0.335 (1.421) data 0.000 (1.089) loss 2.8595 (3.1365) acc 42.9688 (39.8680) (mean 13.4746 many 7.5983 med 10.4550 few 15.7204) lr 1.0000e-02 eta 1 day, 1:52:50
+epoch [1/20] batch [2810/3419] time 0.331 (1.421) data 0.000 (1.089) loss 3.5033 (3.0501) acc 39.0625 (40.1778) (mean 13.5340 many 7.7785 med 10.4550 few 16.2188) lr 1.0000e-02 eta 1 day, 1:52:47
+epoch [1/20] batch [2820/3419] time 0.331 (1.423) data 0.000 (1.092) loss 2.4330 (3.0647) acc 50.7812 (39.8728) (mean 13.5891 many 7.7982 med 10.4550 few 16.1691) lr 1.0000e-02 eta 1 day, 1:55:11
+epoch [1/20] batch [2830/3419] time 0.328 (1.421) data 0.000 (1.089) loss 3.0195 (3.0614) acc 40.6250 (40.0434) (mean 13.6375 many 7.8159 med 10.6145 few 16.1886) lr 1.0000e-02 eta 1 day, 1:52:29
+epoch [1/20] batch [2840/3419] time 0.333 (1.422) data 0.000 (1.090) loss 2.6301 (3.0347) acc 53.9062 (39.9671) (mean 13.6682 many 7.9635 med 10.4778 few 16.4251) lr 1.0000e-02 eta 1 day, 1:53:23
+epoch [1/20] batch [2850/3419] time 15.466 (1.424) data 15.130 (1.093) loss 3.0817 (2.9975) acc 33.5938 (39.0548) (mean 13.7003 many 7.9439 med 10.4778 few 16.3265) lr 1.0000e-02 eta 1 day, 1:55:43
+epoch [1/20] batch [2860/3419] time 1.745 (1.421) data 1.418 (1.089) loss 3.2232 (3.0126) acc 39.8438 (41.4619) (mean 13.7917 many 8.0038 med 10.7635 few 17.0957) lr 1.0000e-02 eta 1 day, 1:51:50
+epoch [1/20] batch [2870/3419] time 0.330 (1.423) data 0.000 (1.091) loss 2.6955 (3.0131) acc 47.6562 (40.8388) (mean 13.8394 many 7.8899 med 10.9248 few 16.6447) lr 1.0000e-02 eta 1 day, 1:53:54
+epoch [1/20] batch [2880/3419] time 0.331 (1.419) data 0.000 (1.088) loss 3.0198 (3.0400) acc 35.9375 (40.1489) (mean 13.8908 many 8.0121 med 11.1293 few 17.4810) lr 1.0000e-02 eta 1 day, 1:49:31
+epoch [1/20] batch [2890/3419] time 0.330 (1.422) data 0.000 (1.090) loss 3.0796 (3.0249) acc 39.0625 (40.2674) (mean 13.9333 many 8.0121 med 11.2237 few 18.6077) lr 1.0000e-02 eta 1 day, 1:52:02
+epoch [1/20] batch [2900/3419] time 0.331 (1.424) data 0.000 (1.092) loss 3.1500 (3.0359) acc 35.9375 (40.7870) (mean 13.9748 many 8.1222 med 11.2027 few 17.8598) lr 1.0000e-02 eta 1 day, 1:53:51
+epoch [1/20] batch [2910/3419] time 0.332 (1.420) data 0.000 (1.088) loss 3.0697 (2.9606) acc 46.0938 (42.1941) (mean 14.0383 many 8.0918 med 11.4884 few 18.4563) lr 1.0000e-02 eta 1 day, 1:49:31
+epoch [1/20] batch [2920/3419] time 0.333 (1.422) data 0.000 (1.091) loss 2.9994 (2.9911) acc 41.4062 (41.5375) (mean 14.1001 many 8.0918 med 11.6320 few 19.2298) lr 1.0000e-02 eta 1 day, 1:51:47
+epoch [1/20] batch [2930/3419] time 17.657 (1.425) data 17.293 (1.093) loss 2.9881 (3.0470) acc 39.8438 (39.6037) (mean 14.1276 many 8.0461 med 11.6320 few 18.9770) lr 1.0000e-02 eta 1 day, 1:53:57
+epoch [1/20] batch [2940/3419] time 0.332 (1.421) data 0.000 (1.089) loss 3.3868 (2.9652) acc 35.9375 (42.0034) (mean 14.1927 many 8.4061 med 11.7963 few 18.3098) lr 1.0000e-02 eta 1 day, 1:49:39
+epoch [1/20] batch [2950/3419] time 0.330 (1.423) data 0.000 (1.091) loss 2.7997 (3.0332) acc 45.3125 (40.6966) (mean 14.2221 many 8.5052 med 11.7731 few 17.5106) lr 1.0000e-02 eta 1 day, 1:51:50
+epoch [1/20] batch [2960/3419] time 0.331 (1.419) data 0.000 (1.088) loss 3.2582 (3.0553) acc 35.1562 (39.6823) (mean 14.2625 many 8.2016 med 11.9210 few 17.3452) lr 1.0000e-02 eta 1 day, 1:47:35
+epoch [1/20] batch [2970/3419] time 0.330 (1.422) data 0.000 (1.090) loss 2.9804 (2.9936) acc 42.1875 (41.0488) (mean 14.3256 many 8.2086 med 11.9210 few 16.9341) lr 1.0000e-02 eta 1 day, 1:49:56
+epoch [1/20] batch [2980/3419] time 0.331 (1.424) data 0.000 (1.092) loss 2.6967 (3.0121) acc 44.5312 (39.7304) (mean 14.3464 many 8.3753 med 11.8942 few 16.3734) lr 1.0000e-02 eta 1 day, 1:52:00
+epoch [1/20] batch [2990/3419] time 0.333 (1.420) data 0.000 (1.089) loss 2.8741 (3.0043) acc 39.0625 (39.8631) (mean 14.3729 many 8.2755 med 11.8863 few 16.5413) lr 1.0000e-02 eta 1 day, 1:47:57
+epoch [1/20] batch [3000/3419] time 0.334 (1.422) data 0.000 (1.091) loss 3.1957 (3.0214) acc 35.1562 (39.5746) (mean 14.4119 many 8.1990 med 12.2054 few 17.1584) lr 1.0000e-02 eta 1 day, 1:49:53
+epoch [1/20] batch [3010/3419] time 15.874 (1.424) data 15.537 (1.092) loss 2.6879 (2.9755) acc 45.3125 (39.8476) (mean 14.4358 many 8.1419 med 12.0777 few 16.9141) lr 1.0000e-02 eta 1 day, 1:51:43
+epoch [1/20] batch [3020/3419] time 2.189 (1.421) data 1.853 (1.089) loss 2.6778 (2.9573) acc 48.4375 (39.9119) (mean 14.4517 many 8.2446 med 12.0018 few 16.2591) lr 1.0000e-02 eta 1 day, 1:48:13
+epoch [1/20] batch [3030/3419] time 0.329 (1.423) data 0.000 (1.091) loss 3.3372 (3.0257) acc 32.8125 (39.6570) (mean 14.5049 many 7.9807 med 12.0018 few 17.2976) lr 1.0000e-02 eta 1 day, 1:49:56
+epoch [1/20] batch [3040/3419] time 0.332 (1.420) data 0.000 (1.088) loss 3.1590 (3.0749) acc 33.5938 (38.2361) (mean 14.5242 many 7.9807 med 12.5447 few 18.0293) lr 1.0000e-02 eta 1 day, 1:45:51
+epoch [1/20] batch [3050/3419] time 0.331 (1.422) data 0.000 (1.090) loss 2.7177 (3.0818) acc 42.1875 (38.7696) (mean 14.5483 many 7.8571 med 12.9840 few 17.6849) lr 1.0000e-02 eta 1 day, 1:47:47
+epoch [1/20] batch [3060/3419] time 0.332 (1.423) data 0.000 (1.091) loss 2.9255 (3.0309) acc 39.8438 (39.5881) (mean 14.5982 many 7.9689 med 12.9840 few 17.2272) lr 1.0000e-02 eta 1 day, 1:49:25
+epoch [1/20] batch [3070/3419] time 0.332 (1.420) data 0.000 (1.088) loss 2.7559 (2.9197) acc 45.3125 (41.6365) (mean 14.6763 many 8.2140 med 13.0857 few 17.9154) lr 1.0000e-02 eta 1 day, 1:45:37
+epoch [1/20] batch [3080/3419] time 0.334 (1.422) data 0.000 (1.090) loss 3.1954 (2.9794) acc 35.1562 (40.9120) (mean 14.7353 many 8.6955 med 13.0296 few 18.2119) lr 1.0000e-02 eta 1 day, 1:47:18
+epoch [1/20] batch [3090/3419] time 16.688 (1.424) data 16.338 (1.092) loss 3.2129 (2.9978) acc 38.2812 (40.1986) (mean 14.7762 many 8.7047 med 12.9521 few 17.5229) lr 1.0000e-02 eta 1 day, 1:49:10
+epoch [1/20] batch [3100/3419] time 1.329 (1.420) data 0.997 (1.089) loss 3.2578 (3.0700) acc 36.7188 (39.9570) (mean 14.8283 many 8.5150 med 12.7924 few 17.4637) lr 1.0000e-02 eta 1 day, 1:45:27
+epoch [1/20] batch [3110/3419] time 0.331 (1.422) data 0.000 (1.090) loss 3.1517 (3.0300) acc 38.2812 (40.0651) (mean 14.8923 many 8.4380 med 12.7924 few 17.2955) lr 1.0000e-02 eta 1 day, 1:47:06
+epoch [1/20] batch [3120/3419] time 0.332 (1.419) data 0.000 (1.088) loss 3.0974 (3.0758) acc 40.6250 (39.4799) (mean 14.9324 many 8.4380 med 12.9073 few 17.3899) lr 1.0000e-02 eta 1 day, 1:43:49
+epoch [1/20] batch [3130/3419] time 0.332 (1.421) data 0.000 (1.089) loss 2.7895 (3.0579) acc 41.4062 (39.5363) (mean 14.9525 many 8.4171 med 13.1644 few 16.2975) lr 1.0000e-02 eta 1 day, 1:44:54
+epoch [1/20] batch [3140/3419] time 0.331 (1.423) data 0.000 (1.091) loss 3.3124 (3.0015) acc 34.3750 (41.3519) (mean 15.0107 many 8.4902 med 13.1101 few 16.0548) lr 1.0000e-02 eta 1 day, 1:46:52
+epoch [1/20] batch [3150/3419] time 0.332 (1.420) data 0.000 (1.088) loss 3.3840 (3.0923) acc 39.0625 (40.9261) (mean 15.0667 many 8.3144 med 13.3302 few 16.4200) lr 1.0000e-02 eta 1 day, 1:43:44
+epoch [1/20] batch [3160/3419] time 0.333 (1.422) data 0.000 (1.090) loss 2.5213 (2.9574) acc 48.4375 (41.5153) (mean 15.1177 many 8.2806 med 13.2791 few 15.8076) lr 1.0000e-02 eta 1 day, 1:45:19
+epoch [1/20] batch [3170/3419] time 17.112 (1.424) data 16.760 (1.092) loss 3.1693 (2.9900) acc 36.7188 (39.9551) (mean 15.1459 many 8.2806 med 13.1673 few 15.7124) lr 1.0000e-02 eta 1 day, 1:47:31
+epoch [1/20] batch [3180/3419] time 0.331 (1.420) data 0.000 (1.089) loss 3.1126 (3.0090) acc 36.7188 (39.8546) (mean 15.1792 many 8.4970 med 13.4279 few 16.3228) lr 1.0000e-02 eta 1 day, 1:43:33
+epoch [1/20] batch [3190/3419] time 0.330 (1.422) data 0.000 (1.090) loss 3.2516 (2.9942) acc 37.5000 (40.2706) (mean 15.2088 many 8.6898 med 13.4279 few 15.7419) lr 1.0000e-02 eta 1 day, 1:45:11
+epoch [1/20] batch [3200/3419] time 0.332 (1.419) data 0.000 (1.088) loss 2.9637 (3.0507) acc 35.9375 (38.0161) (mean 15.2206 many 8.6105 med 13.9377 few 15.3246) lr 1.0000e-02 eta 1 day, 1:41:54
+epoch [1/20] batch [3210/3419] time 0.331 (1.421) data 0.000 (1.089) loss 2.7627 (2.9562) acc 43.7500 (39.1289) (mean 15.2356 many 8.6105 med 14.2081 few 15.3018) lr 1.0000e-02 eta 1 day, 1:42:56
+epoch [1/20] batch [3220/3419] time 0.331 (1.423) data 0.000 (1.091) loss 2.8968 (2.8616) acc 40.6250 (41.4496) (mean 15.2849 many 8.7298 med 14.3626 few 15.2612) lr 1.0000e-02 eta 1 day, 1:45:04
+epoch [1/20] batch [3230/3419] time 0.331 (1.420) data 0.000 (1.088) loss 3.2482 (2.9981) acc 37.5000 (38.6355) (mean 15.3128 many 8.6792 med 14.2576 few 16.1207) lr 1.0000e-02 eta 1 day, 1:42:04
+epoch [1/20] batch [3240/3419] time 0.332 (1.421) data 0.000 (1.089) loss 2.9902 (3.0094) acc 42.9688 (39.8069) (mean 15.3456 many 8.6792 med 13.9502 few 15.8174) lr 1.0000e-02 eta 1 day, 1:42:58
+epoch [1/20] batch [3250/3419] time 14.448 (1.423) data 14.115 (1.091) loss 2.5633 (2.9633) acc 49.2188 (40.1625) (mean 15.4001 many 8.9392 med 14.2115 few 16.6353) lr 1.0000e-02 eta 1 day, 1:44:45
+epoch [1/20] batch [3260/3419] time 1.422 (1.420) data 1.094 (1.088) loss 2.9356 (2.9443) acc 38.2812 (40.9009) (mean 15.4581 many 9.0213 med 14.0853 few 16.9991) lr 1.0000e-02 eta 1 day, 1:41:16
+epoch [1/20] batch [3270/3419] time 0.330 (1.422) data 0.000 (1.090) loss 2.6979 (2.8868) acc 38.2812 (41.4183) (mean 15.5408 many 9.2188 med 14.1856 few 16.8531) lr 1.0000e-02 eta 1 day, 1:42:41
+epoch [1/20] batch [3280/3419] time 0.333 (1.419) data 0.000 (1.088) loss 2.9436 (2.8940) acc 39.8438 (40.8841) (mean 15.5784 many 9.4759 med 14.4209 few 16.9558) lr 1.0000e-02 eta 1 day, 1:40:03
+epoch [1/20] batch [3290/3419] time 0.332 (1.420) data 0.000 (1.088) loss 2.6495 (2.8266) acc 39.8438 (41.7414) (mean 15.6486 many 9.2055 med 14.5864 few 16.1031) lr 1.0000e-02 eta 1 day, 1:40:32
+epoch [1/20] batch [3300/3419] time 0.332 (1.422) data 0.000 (1.090) loss 2.7170 (2.8775) acc 50.7812 (42.4123) (mean 15.7117 many 9.1255 med 14.5864 few 16.3398) lr 1.0000e-02 eta 1 day, 1:42:24
+epoch [1/20] batch [3310/3419] time 0.329 (1.420) data 0.000 (1.088) loss 3.1689 (2.9593) acc 35.1562 (41.6245) (mean 15.7768 many 9.0601 med 14.6240 few 16.5099) lr 1.0000e-02 eta 1 day, 1:40:09
+epoch [1/20] batch [3320/3419] time 0.332 (1.421) data 0.000 (1.089) loss 3.3481 (2.9580) acc 34.3750 (40.3976) (mean 15.8210 many 8.9618 med 14.6151 few 16.5086) lr 1.0000e-02 eta 1 day, 1:40:30
+epoch [1/20] batch [3330/3419] time 13.357 (1.423) data 13.024 (1.091) loss 2.6961 (2.8964) acc 45.3125 (41.7415) (mean 15.8854 many 8.9954 med 14.4763 few 17.2007) lr 1.0000e-02 eta 1 day, 1:42:26
+epoch [1/20] batch [3340/3419] time 2.707 (1.420) data 2.372 (1.088) loss 3.1707 (3.0520) acc 35.9375 (38.7462) (mean 15.8941 many 9.2392 med 14.4763 few 17.6445) lr 1.0000e-02 eta 1 day, 1:39:26
+epoch [1/20] batch [3350/3419] time 0.330 (1.422) data 0.000 (1.090) loss 3.3383 (3.0402) acc 33.5938 (39.3006) (mean 15.9290 many 9.4555 med 14.4763 few 18.2336) lr 1.0000e-02 eta 1 day, 1:40:40
+epoch [1/20] batch [3360/3419] time 0.333 (1.419) data 0.000 (1.087) loss 2.8363 (2.9761) acc 42.1875 (40.3618) (mean 15.9793 many 9.3621 med 14.4763 few 17.6657) lr 1.0000e-02 eta 1 day, 1:37:59
+epoch [1/20] batch [3370/3419] time 0.331 (1.420) data 0.000 (1.088) loss 2.8295 (2.9273) acc 44.5312 (40.1010) (mean 16.0012 many 9.8263 med 14.3900 few 17.3397) lr 1.0000e-02 eta 1 day, 1:38:29
+epoch [1/20] batch [3380/3419] time 0.332 (1.422) data 0.000 (1.090) loss 3.2079 (2.9587) acc 32.8125 (39.8143) (mean 16.0330 many 10.0358 med 14.5696 few 17.8975) lr 1.0000e-02 eta 1 day, 1:40:32
+epoch [1/20] batch [3390/3419] time 0.332 (1.420) data 0.000 (1.088) loss 3.0142 (2.8781) acc 46.0938 (42.7012) (mean 16.1206 many 10.1235 med 14.7541 few 17.6838) lr 1.0000e-02 eta 1 day, 1:37:56
+epoch [1/20] batch [3400/3419] time 0.333 (1.420) data 0.000 (1.088) loss 2.7687 (2.9157) acc 43.7500 (41.8696) (mean 16.1789 many 10.1235 med 14.7541 few 17.4842) lr 1.0000e-02 eta 1 day, 1:37:58
+epoch [1/20] batch [3410/3419] time 1.782 (1.417) data 1.452 (1.086) loss 3.2067 (2.9572) acc 41.4062 (40.3921) (mean 16.2216 many 10.4826 med 14.7541 few 17.2468) lr 1.0000e-02 eta 1 day, 1:34:53
+Evaluate on the test set
+=> result
+* total: 24,426
+* correct: 6,209
+* accuracy: 25.4%
+* error: 74.6%
+* macro_f1: 19.3%
+* class acc: [100.   0.   0. ...   0.   0. 100.]
+* worst_case_acc: 0.0%
+* hmean_acc: 0.0%
+* gmean_acc: 0.0%
+* many: 20.0%  med: 21.0%  few: 22.2%
+* average: 25.4%
+epoch [2/20] batch [10/3419] time 0.330 (1.419) data 0.000 (1.087) loss 3.0299 (2.8995) acc 40.6250 (42.3626) (mean 16.2842 many 10.2904 med 14.6316 few 16.9825) lr 9.9384e-03 eta 1 day, 1:35:39
+epoch [2/20] batch [20/3419] time 0.329 (1.421) data 0.000 (1.089) loss 2.8990 (2.7868) acc 39.8438 (41.6929) (mean 16.3137 many 10.2904 med 14.8133 few 17.0851) lr 9.9384e-03 eta 1 day, 1:37:47
+epoch [2/20] batch [30/3419] time 0.331 (1.418) data 0.000 (1.086) loss 2.8711 (2.8166) acc 40.6250 (42.5803) (mean 16.3740 many 10.1887 med 14.7902 few 16.6541) lr 9.9384e-03 eta 1 day, 1:34:07
